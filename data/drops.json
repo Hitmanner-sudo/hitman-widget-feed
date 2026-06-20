@@ -1,5 +1,18 @@
 {
-  "generated": null,
-  "items": [],
+  "generated": "2026-06-20T09:46:08.345758+00:00",
+  "items": [
+    {
+      "game": "HITMAN World of Assassination",
+      "summary": "Drops for HITMAN World of Assassination: 1 reward — The Bowtie Duck (1h). Ends Jun 28. Claim: twitch.tv/drops/inventory | Details: twitchdrops.app/game/hitman-world-of-assassination",
+      "image": "",
+      "url": "https://twitchdrops.app/game/hitman-world-of-assassination"
+    },
+    {
+      "game": "007 First Light",
+      "summary": "Drops for 007 First Light: 4 rewards — Purple Suit (1h), Silent Line (2h), 007 Gun Barrel (1 sub), Resplendent Death (1h). Ends Jun 23. Claim: twitch.tv/drops/inventory | Details: twitchdrops.app/game/007-first-light",
+      "image": "",
+      "url": "https://twitchdrops.app/game/007-first-light"
+    }
+  ],
   "attribution": "Data via twitchdrops.app (unofficial fan site)"
 }
