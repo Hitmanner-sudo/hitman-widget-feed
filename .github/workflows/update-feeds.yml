@@ -2,7 +2,6 @@ name: Update Widget Feeds
 
 on:
   schedule:
-    # Every 10 minutes. Public repo = unlimited free Actions minutes.
     - cron: "*/10 * * * *"
   workflow_dispatch: {}
 
