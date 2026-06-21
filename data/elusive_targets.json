@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-21T01:42:50.078801+00:00",
+  "generated": "2026-06-21T03:46:11.691307+00:00",
   "ongoing_count": 1,
   "incoming_count": 3,
   "ongoing": [
@@ -8,9 +8,7 @@
       "begin": "2026-06-05T12:00:00Z",
       "end": "2026-07-06T12:00:00Z",
       "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman2/the-wizard.jpg",
-      "url": "https://www.hitmaps.com/games/hitman2/isle-of-sgail/ark-society",
-      "days_left": 15,
-      "hours_left": 370
+      "url": "https://www.hitmaps.com/games/hitman2/isle-of-sgail/ark-society"
     }
   ],
   "incoming": [
@@ -19,27 +17,21 @@
       "begin": "2026-06-26T12:00:00Z",
       "end": "2026-07-06T12:00:00Z",
       "image": "https://media.hitmaps.com/img/hitman2/actors/elusive-targets/legacy/the-gunrunner.jpg",
-      "url": "https://www.hitmaps.com/games/hitman/marrakesh/a-gilded-cage",
-      "days_until": 5,
-      "hours_until": 130
+      "url": "https://www.hitmaps.com/games/hitman/marrakesh/a-gilded-cage"
     },
     {
       "name": "The Stowaway - Year 6",
       "begin": "2026-07-03T12:00:00Z",
       "end": "2026-07-13T12:00:00Z",
       "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman2/the-stowaway.jpg",
-      "url": "https://www.hitmaps.com/games/hitman2/isle-of-sgail/ark-society",
-      "days_until": 12,
-      "hours_until": 298
+      "url": "https://www.hitmaps.com/games/hitman2/isle-of-sgail/ark-society"
     },
     {
       "name": "The Drop (2026)",
       "begin": "2026-07-06T12:00:00Z",
       "end": "2026-07-27T12:00:00Z",
       "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman3/the-drop.jpg",
-      "url": "https://www.hitmaps.com/games/hitman3/berlin/apex-predator",
-      "days_until": 15,
-      "hours_until": 370
+      "url": "https://www.hitmaps.com/games/hitman3/berlin/apex-predator"
     }
   ],
   "attribution": "Data via HITMAPS (hitmaps.com)"
