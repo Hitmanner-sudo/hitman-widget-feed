@@ -1,21 +1,4 @@
 #!/usr/bin/env python3
-"""
-Generates three static JSON files meant to be hosted on GitHub Pages and
-fetched directly by KWGT (Kustom Widget Maker, free Android app) to build
-real home-screen widgets.
-
-Run via GitHub Actions on a schedule -> commits updated JSON -> GitHub Pages
-serves it as plain static files -> KWGT's HTTP/JSON features pull it in.
-
-Outputs:
-    data/elusive_targets.json   -- ongoing + incoming ETs, from HITMAPS
-    data/news.json              -- recent ioi.dk posts w/ titles + images
-    data/drops.json             -- active Twitch drops w/ images, from twitchdrops.app
-
-Each output is a flat, KWGT-friendly JSON structure: short keys, no nesting
-deeper than necessary, since KWGT's JSON path syntax is simplest against
-flat arrays of objects.
-"""
 
 import json
 import re
@@ -51,10 +34,6 @@ def now_iso():
     return datetime.now(timezone.utc).isoformat()
 
 
-# ---------------------------------------------------------------------------
-# Elusive Targets (HITMAPS)
-# ---------------------------------------------------------------------------
-
 def build_elusive_targets():
     try:
         raw = fetch(HITMAPS_HOME_API)
@@ -83,12 +62,8 @@ def build_elusive_targets():
         }
 
         if begin <= now <= end:
-            entry["days_left"] = max(0, (end - now).days)
-            entry["hours_left"] = max(0, int((end - now).total_seconds() // 3600))
             ongoing.append(entry)
         elif begin > now:
-            entry["days_until"] = max(0, (begin - now).days)
-            entry["hours_until"] = max(0, int((begin - now).total_seconds() // 3600))
             incoming.append(entry)
 
     ongoing.sort(key=lambda e: e["end"])
@@ -103,10 +78,6 @@ def build_elusive_targets():
         "attribution": "Data via HITMAPS (hitmaps.com)",
     }
 
-
-# ---------------------------------------------------------------------------
-# IOI News (titles + per-post image via og:image, real HTML fetch)
-# ---------------------------------------------------------------------------
 
 def extract_post_links(news_html: str, base_url: str):
     links = []
@@ -164,10 +135,6 @@ def build_news(max_per_source=8):
         "items": items,
     }
 
-
-# ---------------------------------------------------------------------------
-# Twitch Drops (twitchdrops.app)
-# ---------------------------------------------------------------------------
 
 def build_drops():
     items = []
