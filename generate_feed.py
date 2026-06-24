@@ -146,70 +146,152 @@ def build_news(max_per_source=8):
     }
 
 
-def parse_drops_page(html: str, slug: str, label: str, account_link_url: str) -> dict:
-    m = re.search(r'meta-og:image:\s*(.+)', html)
-    campaign_image = m.group(1).strip() if m else ""
+def parse_active_campaigns(html: str) -> list:
+    campaigns = []
 
-    end_times = re.findall(r'<time[^>]+datetime="([^"]+)"', html)
-    end_date_human = re.findall(
-        r'campaigns? end\s+([A-Za-z]+ \d+(?:,\s*\d{4})?)',
-        html, re.IGNORECASE
-    )
+    past_marker = re.search(r'<h2>Past Drops</h2>|<h2>Past Campaigns</h2>', html)
+    active_html = html[:past_marker.start()] if past_marker else html
 
-    end_iso = None
-    if end_times:
-        parsed_ends = []
-        for t in end_times:
-            try:
-                parsed_ends.append(datetime.fromisoformat(t.replace("Z", "+00:00")))
-            except ValueError:
-                pass
-        now = datetime.now(timezone.utc)
-        future = [e for e in parsed_ends if e > now]
-        if future:
-            soonest = min(future)
-            end_iso = soonest.isoformat()
-
-    end_human = end_date_human[0] if end_date_human else None
-
-    m_ch = re.search(r'\*\*Channels:\*\*\s*(.+)', html)
-    channels = m_ch.group(1).strip() if m_ch else "All Channels"
-
-    reward_pattern = re.compile(
-        r'!\[([^\]]+)\]\((https://static-cdn\.jtvnw\.net/twitch-quests-assets/REWARD/[^\)]+)\)'
-        r'.*?\n+\1\n+\n+(Watch [^\n]+)',
+    campaign_pattern = re.compile(
+        r'<div class="campaign-banner(?!\s+expired)[^"]*"[^>]*>(.*?)</div>\s*</div>\s*</div>',
         re.DOTALL
     )
-    rewards = []
-    seen_imgs = set()
-    for m in reward_pattern.finditer(html):
-        img = m.group(2).strip()
-        if img in seen_imgs:
-            continue
-        seen_imgs.add(img)
-        rewards.append({
-            "name": m.group(1).strip(),
-            "image": img,
-            "requirement": m.group(3).strip(),
+
+    for camp_m in campaign_pattern.finditer(active_html):
+        block = camp_m.group(0)
+
+        m_name = re.search(r'<span class="cb-name">([^<]+)</span>', block)
+        name = m_name.group(1).strip() if m_name else "Unknown Campaign"
+
+        m_dates = re.search(r'<span class="cb-dates">([^<]+)</span>', block)
+        dates_text = m_dates.group(1).strip() if m_dates else ""
+
+        m_owner = re.search(r'<span class="cb-owner">([^<]+)</span>', block)
+        owner = m_owner.group(1).strip() if m_owner else ""
+
+        m_end_ts = re.search(r'data-end-ts="(\d+)"', block)
+        end_iso = None
+        if m_end_ts:
+            ts_ms = int(m_end_ts.group(1))
+            end_iso = datetime.fromtimestamp(ts_ms / 1000, tz=timezone.utc).isoformat()
+
+        m_ch = re.search(r'<strong>Channels:</strong>\s*<span[^>]*>([^<]+)</span>', block)
+        channels = m_ch.group(1).strip() if m_ch else "All Channels"
+        if not m_ch:
+            channel_links = re.findall(r'<a[^>]+class="channel-link"[^>]*>([^<]+)</a>', block)
+            if channel_links:
+                channels = ", ".join(channel_links[:5])
+                total = re.search(r'\+\s*(\d+)\s*more', block)
+                if total:
+                    channels += f" + {total.group(1)} more"
+
+        m_desc = re.search(r'<div class="cb-desc">([^<]+)</div>', block)
+        description = m_desc.group(1).strip() if m_desc else ""
+
+        campaigns.append({
+            "name": name,
+            "owner": owner,
+            "dates_text": dates_text,
+            "end_iso": end_iso,
+            "channels": channels,
+            "description": description,
         })
 
-    m_earn = re.search(
-        r'Earning this reward is simple\.\s*(.+?)(?=\n##|\Z)',
-        html, re.DOTALL
+    return campaigns
+
+
+def parse_active_rewards(html: str, active_campaign_names: list) -> list:
+    past_drops_marker = re.search(r'<h2>Past Drops</h2>', html)
+    active_html = html[:past_drops_marker.start()] if past_drops_marker else html
+
+    active_imgs = set()
+    img_pattern = re.compile(
+        r'<img\s+src="(https://static-cdn\.jtvnw\.net/twitch-quests-assets/REWARD/[^"]+)"[^>]*class="drop-img"',
+        re.DOTALL
     )
-    requirement_note = re.sub(r'\s+', ' ', m_earn.group(0)).strip() if m_earn else ""
+    for m in img_pattern.finditer(active_html):
+        active_imgs.add(m.group(1).strip())
+
+    reward_pattern = re.compile(
+        r'<div class="drop-card[^"]*"[^>]*>\s*'
+        r'<img\s+src="(https://static-cdn\.jtvnw\.net/twitch-quests-assets/REWARD/[^"]+)"'
+        r'\s+alt="([^"]+)"[^>]*>\s*'
+        r'<div class="drop-name">([^<]+)</div>\s*'
+        r'<div class="drop-time">([^<]+)</div>\s*'
+        r'<div class="drop-campaign">([^<]+)</div>',
+        re.DOTALL
+    )
+
+    rewards_by_campaign = {}
+    seen_imgs = set()
+
+    for m in reward_pattern.finditer(active_html):
+        img = m.group(1).strip()
+        if img in seen_imgs or img not in active_imgs:
+            continue
+        seen_imgs.add(img)
+
+        campaign_name = m.group(5).strip()
+        reward = {
+            "name": m.group(3).strip(),
+            "image": img,
+            "requirement": m.group(4).strip(),
+        }
+
+        if campaign_name not in rewards_by_campaign:
+            rewards_by_campaign[campaign_name] = []
+        rewards_by_campaign[campaign_name].append(reward)
+
+    return rewards_by_campaign
+
+
+def parse_drops_page(html: str, slug: str, label: str, account_link_url: str) -> dict:
+    m = re.search(r'<meta\s+(?:property|name)="og:image"\s+content="([^"]+)"', html)
+    if not m:
+        m = re.search(r'content="([^"]+)"\s+(?:property|name)="og:image"', html)
+    campaign_image = m.group(1).strip() if m else ""
+
+    end_date_human = re.findall(
+        r'campaigns?\s+end\s+(?:on\s+)?([A-Za-z]+ \d+(?:,\s*\d{4})?)',
+        html, re.IGNORECASE
+    )
+    end_human = end_date_human[0] if end_date_human else None
+
+    active_campaigns = parse_active_campaigns(html)
+    active_campaign_names = [c["name"] for c in active_campaigns]
+    rewards_by_campaign = parse_active_rewards(html, active_campaign_names)
+
+    soonest_end_iso = None
+    end_isos = [c["end_iso"] for c in active_campaigns if c["end_iso"]]
+    if end_isos:
+        now = datetime.now(timezone.utc)
+        future = []
+        for t in end_isos:
+            try:
+                dt = datetime.fromisoformat(t)
+                if dt > now:
+                    future.append(dt)
+            except ValueError:
+                pass
+        if future:
+            soonest_end_iso = min(future).isoformat()
+
+    for camp in active_campaigns:
+        camp["rewards"] = rewards_by_campaign.get(camp["name"], [])
+        camp["reward_count"] = len(camp["rewards"])
+
+    total_rewards = sum(c["reward_count"] for c in active_campaigns)
 
     return {
         "game": label,
         "slug": slug,
         "campaign_image": campaign_image,
         "account_link_url": account_link_url,
-        "channels": channels,
-        "end_iso": end_iso,
+        "soonest_end_iso": soonest_end_iso,
         "end_human": end_human,
-        "reward_count": len(rewards),
-        "rewards": rewards,
-        "requirement_note": requirement_note,
+        "campaign_count": len(active_campaigns),
+        "total_reward_count": total_rewards,
+        "campaigns": active_campaigns,
         "url": f"https://twitchdrops.app/game/{slug}",
     }
 
