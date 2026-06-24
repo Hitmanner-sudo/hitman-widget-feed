@@ -200,20 +200,12 @@ def parse_active_campaigns(html: str) -> list:
     return campaigns
 
 
-def parse_active_rewards(html: str, active_campaign_names: list) -> list:
+def parse_active_rewards(html: str, active_campaign_names: list) -> dict:
     past_drops_marker = re.search(r'<h2>Past Drops</h2>', html)
     active_html = html[:past_drops_marker.start()] if past_drops_marker else html
 
-    active_imgs = set()
-    img_pattern = re.compile(
-        r'<img\s+src="(https://static-cdn\.jtvnw\.net/twitch-quests-assets/REWARD/[^"]+)"[^>]*class="drop-img"',
-        re.DOTALL
-    )
-    for m in img_pattern.finditer(active_html):
-        active_imgs.add(m.group(1).strip())
-
     reward_pattern = re.compile(
-        r'<div class="drop-card[^"]*"[^>]*>\s*'
+        r'<div class="drop-card(?!\s+drop-expired)[^"]*"[^>]*>\s*'
         r'<img\s+src="(https://static-cdn\.jtvnw\.net/twitch-quests-assets/REWARD/[^"]+)"'
         r'\s+alt="([^"]+)"[^>]*>\s*'
         r'<div class="drop-name">([^<]+)</div>\s*'
@@ -227,7 +219,7 @@ def parse_active_rewards(html: str, active_campaign_names: list) -> list:
 
     for m in reward_pattern.finditer(active_html):
         img = m.group(1).strip()
-        if img in seen_imgs or img not in active_imgs:
+        if img in seen_imgs:
             continue
         seen_imgs.add(img)
 
