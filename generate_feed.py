@@ -19,8 +19,18 @@ IOI_NEWS_SOURCES = [
 ]
 
 TWITCH_DROPS_SOURCES = [
-    {"key": "hitman", "label": "HITMAN World of Assassination", "slug": "hitman-world-of-assassination"},
-    {"key": "007", "label": "007 First Light", "slug": "007-first-light"},
+    {
+        "key": "hitman",
+        "label": "HITMAN World of Assassination",
+        "slug": "hitman-world-of-assassination",
+        "account_link_url": "https://account.ioi.dk/",
+    },
+    {
+        "key": "007",
+        "label": "007 First Light",
+        "slug": "007-first-light",
+        "account_link_url": "https://account.ioi.dk/",
+    },
 ]
 
 
@@ -136,35 +146,102 @@ def build_news(max_per_source=8):
     }
 
 
-def build_drops():
+def parse_drops_page(html: str, slug: str, label: str, account_link_url: str) -> dict:
+    m = re.search(r'meta-og:image:\s*(.+)', html)
+    campaign_image = m.group(1).strip() if m else ""
+
+    end_times = re.findall(r'<time[^>]+datetime="([^"]+)"', html)
+    end_date_human = re.findall(
+        r'campaigns? end\s+([A-Za-z]+ \d+(?:,\s*\d{4})?)',
+        html, re.IGNORECASE
+    )
+
+    end_iso = None
+    if end_times:
+        parsed_ends = []
+        for t in end_times:
+            try:
+                parsed_ends.append(datetime.fromisoformat(t.replace("Z", "+00:00")))
+            except ValueError:
+                pass
+        now = datetime.now(timezone.utc)
+        future = [e for e in parsed_ends if e > now]
+        if future:
+            soonest = min(future)
+            end_iso = soonest.isoformat()
+
+    end_human = end_date_human[0] if end_date_human else None
+
+    m_ch = re.search(r'\*\*Channels:\*\*\s*(.+)', html)
+    channels = m_ch.group(1).strip() if m_ch else "All Channels"
+
+    reward_pattern = re.compile(
+        r'!\[([^\]]+)\]\((https://static-cdn\.jtvnw\.net/twitch-quests-assets/REWARD/[^\)]+)\)'
+        r'.*?\n+\1\n+\n+(Watch [^\n]+)',
+        re.DOTALL
+    )
+    rewards = []
+    seen_imgs = set()
+    for m in reward_pattern.finditer(html):
+        img = m.group(2).strip()
+        if img in seen_imgs:
+            continue
+        seen_imgs.add(img)
+        rewards.append({
+            "name": m.group(1).strip(),
+            "image": img,
+            "requirement": m.group(3).strip(),
+        })
+
+    m_earn = re.search(
+        r'Earning this reward is simple\.\s*(.+?)(?=\n##|\Z)',
+        html, re.DOTALL
+    )
+    requirement_note = re.sub(r'\s+', ' ', m_earn.group(0)).strip() if m_earn else ""
+
+    return {
+        "game": label,
+        "slug": slug,
+        "campaign_image": campaign_image,
+        "account_link_url": account_link_url,
+        "channels": channels,
+        "end_iso": end_iso,
+        "end_human": end_human,
+        "reward_count": len(rewards),
+        "rewards": rewards,
+        "requirement_note": requirement_note,
+        "url": f"https://twitchdrops.app/game/{slug}",
+    }
+
+
+def build_drops() -> dict:
     items = []
     for src in TWITCH_DROPS_SOURCES:
         url = f"https://twitchdrops.app/game/{src['slug']}"
-        chatbot_url = f"https://twitchdrops.app/api/chatbot/{src['slug']}"
-        try:
-            summary_line = fetch(chatbot_url).strip()
-        except (URLError, HTTPError) as e:
-            print(f"[drops:{src['key']}] failed to fetch chatbot line: {e}", file=sys.stderr)
-            summary_line = ""
-
-        image = ""
         try:
             page_html = fetch(url)
-            image = get_meta(page_html, "og:image")
         except (URLError, HTTPError) as e:
-            print(f"[drops:{src['key']}] failed to fetch page for image: {e}", file=sys.stderr)
+            print(f"[drops:{src['key']}] failed to fetch page: {e}", file=sys.stderr)
+            items.append({
+                "game": src["label"],
+                "slug": src["slug"],
+                "url": url,
+                "error": str(e),
+            })
+            continue
 
-        items.append({
-            "game": src["label"],
-            "summary": summary_line,
-            "image": image,
-            "url": url,
-        })
+        entry = parse_drops_page(
+            page_html,
+            slug=src["slug"],
+            label=src["label"],
+            account_link_url=src.get("account_link_url", ""),
+        )
+        items.append(entry)
 
     return {
         "generated": now_iso(),
         "items": items,
-        "attribution": "Data via twitchdrops.app (unofficial fan site)",
+        "attribution": "Data scraped from twitchdrops.app (unofficial fan site)",
     }
 
 
