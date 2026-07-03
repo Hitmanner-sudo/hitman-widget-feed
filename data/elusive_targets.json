@@ -1,7 +1,7 @@
 {
-  "generated": "2026-07-03T08:37:25.947548+00:00",
-  "ongoing_count": 2,
-  "incoming_count": 2,
+  "generated": "2026-07-03T15:56:04.288975+00:00",
+  "ongoing_count": 3,
+  "incoming_count": 1,
   "ongoing": [
     {
       "name": "The Wizard (2026)",
@@ -16,16 +16,16 @@
       "end": "2026-07-06T12:00:00Z",
       "image": "https://media.hitmaps.com/img/hitman2/actors/elusive-targets/legacy/the-gunrunner.jpg",
       "url": "https://www.hitmaps.com/games/hitman/marrakesh/a-gilded-cage"
-    }
-  ],
-  "incoming": [
+    },
     {
       "name": "The Stowaway - Year 6",
       "begin": "2026-07-03T12:00:00Z",
       "end": "2026-07-13T12:00:00Z",
       "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman2/the-stowaway.jpg",
       "url": "https://www.hitmaps.com/games/hitman2/isle-of-sgail/ark-society"
-    },
+    }
+  ],
+  "incoming": [
     {
       "name": "The Drop (2026)",
       "begin": "2026-07-06T12:00:00Z",
