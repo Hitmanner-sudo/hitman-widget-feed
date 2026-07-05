@@ -1,27 +1,16 @@
 {
-  "generated": "2026-07-05T09:46:32.520217+00:00",
+  "generated": "2026-07-05T15:00:00.086636+00:00",
   "items": [
     {
       "game": "HITMAN World of Assassination",
       "slug": "hitman-world-of-assassination",
       "campaign_image": "https://static-cdn.jtvnw.net/twitch-quests-assets/CAMPAIGN/1ef6e6dc-f5cc-4f1f-bc43-db895885576c.jpeg",
       "account_link_url": "https://account.ioi.dk/",
-      "soonest_end_iso": "2026-07-05T13:59:59.999000+00:00",
-      "end_human": "Jul 5",
-      "campaign_count": 1,
+      "soonest_end_iso": null,
+      "end_human": null,
+      "campaign_count": 0,
       "total_reward_count": 0,
-      "campaigns": [
-        {
-          "name": "The Wizard #4",
-          "owner": "IO Interactive",
-          "dates_text": "Jun 29 — in 4h 28m",
-          "end_iso": "2026-07-05T13:59:59.999000+00:00",
-          "channels": "All Channels",
-          "description": "Earning this reward is simple. You only need to link your IOI Account to your Twitch account and then watch a cumulative 1 hour of HITMAN World of Assassination on Twitch during the drop campaign duration.",
-          "rewards": [],
-          "reward_count": 0
-        }
-      ],
+      "campaigns": [],
       "url": "https://twitchdrops.app/game/hitman-world-of-assassination"
     },
     {
@@ -37,7 +26,7 @@
         {
           "name": "007 First Light #2",
           "owner": "IO Interactive",
-          "dates_text": "Jun 23 — in 15 days",
+          "dates_text": "Jun 23 — in 14 days",
           "end_iso": "2026-07-19T23:29:59.999000+00:00",
           "channels": "All Channels",
           "description": "Earning this reward is simple. You only need to link your IOI Account to your Twitch account and then watch a 007 FIrst Light stream on Twitch during the drop campaign duration.",
