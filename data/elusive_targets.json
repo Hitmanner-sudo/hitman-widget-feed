@@ -1,31 +1,15 @@
 {
-  "generated": "2026-07-05T22:17:32.581318+00:00",
-  "ongoing_count": 3,
-  "incoming_count": 1,
+  "generated": "2026-07-06T12:58:48.726103+00:00",
+  "ongoing_count": 2,
+  "incoming_count": 0,
   "ongoing": [
-    {
-      "name": "The Wizard (2026)",
-      "begin": "2026-06-05T12:00:00Z",
-      "end": "2026-07-06T12:00:00Z",
-      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman2/the-wizard.jpg",
-      "url": "https://www.hitmaps.com/games/hitman2/isle-of-sgail/ark-society"
-    },
-    {
-      "name": "The Gunrunner - Year 6",
-      "begin": "2026-06-26T12:00:00Z",
-      "end": "2026-07-06T12:00:00Z",
-      "image": "https://media.hitmaps.com/img/hitman2/actors/elusive-targets/legacy/the-gunrunner.jpg",
-      "url": "https://www.hitmaps.com/games/hitman/marrakesh/a-gilded-cage"
-    },
     {
       "name": "The Stowaway - Year 6",
       "begin": "2026-07-03T12:00:00Z",
       "end": "2026-07-13T12:00:00Z",
       "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman2/the-stowaway.jpg",
       "url": "https://www.hitmaps.com/games/hitman2/isle-of-sgail/ark-society"
-    }
-  ],
-  "incoming": [
+    },
     {
       "name": "The Drop (2026)",
       "begin": "2026-07-06T12:00:00Z",
@@ -34,5 +18,6 @@
       "url": "https://www.hitmaps.com/games/hitman3/berlin/apex-predator"
     }
   ],
+  "incoming": [],
   "attribution": "Data via HITMAPS (hitmaps.com)"
 }
