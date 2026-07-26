@@ -1,16 +1,27 @@
 {
-  "generated": "2026-07-26T13:28:30.732936+00:00",
+  "generated": "2026-07-26T14:49:45.113329+00:00",
   "items": [
     {
       "game": "HITMAN World of Assassination",
       "slug": "hitman-world-of-assassination",
-      "campaign_image": "https://static-cdn.jtvnw.net/twitch-quests-assets/CAMPAIGN/8af9d5b6-efa4-450b-ba38-26e4655b6ee8.jpeg",
+      "campaign_image": "https://static-cdn.jtvnw.net/twitch-quests-assets/CAMPAIGN/a8439109-13a9-4fc5-a5b4-aa2e9b8a3d06.jpeg",
       "account_link_url": "https://account.ioi.dk/",
-      "soonest_end_iso": null,
-      "end_human": null,
-      "campaign_count": 0,
+      "soonest_end_iso": "2026-08-09T13:59:59.999000+00:00",
+      "end_human": "Aug 9",
+      "campaign_count": 1,
       "total_reward_count": 0,
-      "campaigns": [],
+      "campaigns": [
+        {
+          "name": "The Wizard #7",
+          "owner": "IO Interactive",
+          "dates_text": "Jul 27 — in 14 days",
+          "end_iso": "2026-08-09T13:59:59.999000+00:00",
+          "channels": "All Channels",
+          "description": "Earning this reward is simple. You only need to link your IOI Account to your Twitch account and then watch a cumulative 1 hour of HITMAN World of Assassination on Twitch during the drop campaign duration.",
+          "rewards": [],
+          "reward_count": 0
+        }
+      ],
       "url": "https://twitchdrops.app/game/hitman-world-of-assassination"
     },
     {
