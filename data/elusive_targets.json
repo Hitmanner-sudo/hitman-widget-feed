@@ -1,6 +1,6 @@
 {
-  "generated": "2026-07-27T11:59:17.317582+00:00",
-  "ongoing_count": 1,
+  "generated": "2026-07-27T15:07:00.726783+00:00",
+  "ongoing_count": 2,
   "incoming_count": 0,
   "ongoing": [
     {
@@ -9,6 +9,13 @@
       "end": "2026-08-02T12:00:00Z",
       "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman/the-ex-dictator.jpg",
       "url": "https://www.hitmaps.com/games/hitman/bangkok/club-27"
+    },
+    {
+      "name": "The Reflection (2026)",
+      "begin": "2026-07-27T12:00:00Z",
+      "end": "2026-08-23T12:00:00Z",
+      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman/the-reflection.jpg",
+      "url": "https://www.hitmaps.com/games/hitman/hokkaido/situs-inversus"
     }
   ],
   "incoming": [],
