@@ -1,7 +1,7 @@
 {
-  "generated": "2026-07-28T22:44:24.934027+00:00",
+  "generated": "2026-07-28T23:44:10.253465+00:00",
   "ongoing_count": 2,
-  "incoming_count": 0,
+  "incoming_count": 2,
   "ongoing": [
     {
       "name": "The Ex-Dictator - Year 6",
@@ -18,6 +18,21 @@
       "url": "https://www.hitmaps.com/games/hitman/hokkaido/situs-inversus"
     }
   ],
-  "incoming": [],
+  "incoming": [
+    {
+      "name": "The Appraiser - Year 6",
+      "begin": "2026-08-07T12:00:00Z",
+      "end": "2026-08-16T12:00:00Z",
+      "image": "https://media.hitmaps.com/img/hitman2/actors/elusive-targets/the-appraiser.jpg",
+      "url": "https://www.hitmaps.com/games/hitman2/isle-of-sgail/ark-society"
+    },
+    {
+      "name": "The Iconoclast - Year 6",
+      "begin": "2026-08-14T12:00:00Z",
+      "end": "2026-08-23T12:00:01Z",
+      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman3/the-iconoclast.jpg",
+      "url": "https://www.hitmaps.com/games/hitman3/mendoza/the-farewell"
+    }
+  ],
   "attribution": "Data via HITMAPS (hitmaps.com)"
 }
