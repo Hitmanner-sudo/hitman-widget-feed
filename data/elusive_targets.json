@@ -1,7 +1,7 @@
 {
-  "generated": "2026-08-14T11:21:29.201991+00:00",
-  "ongoing_count": 2,
-  "incoming_count": 1,
+  "generated": "2026-08-14T12:05:05.436224+00:00",
+  "ongoing_count": 3,
+  "incoming_count": 0,
   "ongoing": [
     {
       "name": "The Appraiser - Year 6",
@@ -16,9 +16,7 @@
       "end": "2026-08-23T12:00:00Z",
       "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman/the-reflection.jpg",
       "url": "https://www.hitmaps.com/games/hitman/hokkaido/situs-inversus"
-    }
-  ],
-  "incoming": [
+    },
     {
       "name": "The Iconoclast - Year 6",
       "begin": "2026-08-14T12:00:00Z",
@@ -27,5 +25,6 @@
       "url": "https://www.hitmaps.com/games/hitman3/mendoza/the-farewell"
     }
   ],
+  "incoming": [],
   "attribution": "Data via HITMAPS (hitmaps.com)"
 }
