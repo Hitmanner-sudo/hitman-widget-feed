@@ -1,23 +1,8 @@
 {
-  "generated": "2026-08-23T11:52:44.114572+00:00",
-  "ongoing_count": 2,
+  "generated": "2026-08-23T12:32:27.389088+00:00",
+  "ongoing_count": 0,
   "incoming_count": 0,
-  "ongoing": [
-    {
-      "name": "The Reflection (2026)",
-      "begin": "2026-07-27T12:00:00Z",
-      "end": "2026-08-23T12:00:00Z",
-      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman/the-reflection.jpg",
-      "url": "https://www.hitmaps.com/games/hitman/hokkaido/situs-inversus"
-    },
-    {
-      "name": "The Iconoclast - Year 6",
-      "begin": "2026-08-14T12:00:00Z",
-      "end": "2026-08-23T12:00:01Z",
-      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman3/the-iconoclast.jpg",
-      "url": "https://www.hitmaps.com/games/hitman3/mendoza/the-farewell"
-    }
-  ],
+  "ongoing": [],
   "incoming": [],
   "attribution": "Data via HITMAPS (hitmaps.com)"
 }
