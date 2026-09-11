@@ -1,8 +1,15 @@
 {
-  "generated": "2026-09-11T09:39:14.191269+00:00",
-  "ongoing_count": 1,
-  "incoming_count": 2,
+  "generated": "2026-09-11T13:49:50.282200+00:00",
+  "ongoing_count": 2,
+  "incoming_count": 1,
   "ongoing": [
+    {
+      "name": "The Politician - Year 6",
+      "begin": "2026-09-11T12:00:00Z",
+      "end": "2026-09-20T12:00:00Z",
+      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman2/the-politician.jpg",
+      "url": "https://www.hitmaps.com/games/hitman2/hawkes-bay/nightcall"
+    },
     {
       "name": "The Herbalist (2026)",
       "begin": "2026-08-27T12:00:00Z",
@@ -12,13 +19,6 @@
     }
   ],
   "incoming": [
-    {
-      "name": "The Politician - Year 6",
-      "begin": "2026-09-11T12:00:00Z",
-      "end": "2026-09-20T12:00:00Z",
-      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman2/the-politician.jpg",
-      "url": "https://www.hitmaps.com/games/hitman2/hawkes-bay/nightcall"
-    },
     {
       "name": "The Chameleon - Year 6",
       "begin": "2026-09-18T12:00:00Z",
