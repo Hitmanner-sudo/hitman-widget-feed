@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-18T11:05:31.718425+00:00",
-  "ongoing_count": 2,
-  "incoming_count": 1,
+  "generated": "2026-09-18T14:57:34.524747+00:00",
+  "ongoing_count": 3,
+  "incoming_count": 0,
   "ongoing": [
     {
       "name": "The Politician - Year 6",
@@ -11,6 +11,13 @@
       "url": "https://www.hitmaps.com/games/hitman2/hawkes-bay/nightcall"
     },
     {
+      "name": "The Chameleon - Year 6",
+      "begin": "2026-09-18T12:00:00Z",
+      "end": "2026-09-27T12:00:00Z",
+      "image": "https://media.hitmaps.com/img/hitman2/actors/elusive-targets/legacy/the-chameleon.jpg",
+      "url": "https://www.hitmaps.com/games/hitman/colorado/freedom-fighters"
+    },
+    {
       "name": "The Herbalist (2026)",
       "begin": "2026-08-27T12:00:00Z",
       "end": "2026-09-27T12:00:10Z",
@@ -18,14 +25,6 @@
       "url": "https://www.hitmaps.com/games/hitman2/haven-island/the-last-resort"
     }
   ],
-  "incoming": [
-    {
-      "name": "The Chameleon - Year 6",
-      "begin": "2026-09-18T12:00:00Z",
-      "end": "2026-09-27T12:00:00Z",
-      "image": "https://media.hitmaps.com/img/hitman2/actors/elusive-targets/legacy/the-chameleon.jpg",
-      "url": "https://www.hitmaps.com/games/hitman/colorado/freedom-fighters"
-    }
-  ],
+  "incoming": [],
   "attribution": "Data via HITMAPS (hitmaps.com)"
 }
