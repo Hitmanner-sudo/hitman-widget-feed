@@ -1,23 +1,8 @@
 {
-  "generated": "2026-09-27T08:03:11.204717+00:00",
-  "ongoing_count": 2,
+  "generated": "2026-09-27T13:53:05.665053+00:00",
+  "ongoing_count": 0,
   "incoming_count": 0,
-  "ongoing": [
-    {
-      "name": "The Chameleon - Year 6",
-      "begin": "2026-09-18T12:00:00Z",
-      "end": "2026-09-27T12:00:00Z",
-      "image": "https://media.hitmaps.com/img/hitman2/actors/elusive-targets/legacy/the-chameleon.jpg",
-      "url": "https://www.hitmaps.com/games/hitman/colorado/freedom-fighters"
-    },
-    {
-      "name": "The Herbalist (2026)",
-      "begin": "2026-08-27T12:00:00Z",
-      "end": "2026-09-27T12:00:10Z",
-      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman2/the-herbalist.jpg",
-      "url": "https://www.hitmaps.com/games/hitman2/haven-island/the-last-resort"
-    }
-  ],
+  "ongoing": [],
   "incoming": [],
   "attribution": "Data via HITMAPS (hitmaps.com)"
 }
