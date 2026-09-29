@@ -1,15 +1,19 @@
 #!/usr/bin/env python3
 
+import html as htmllib
 import json
 import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.error import HTTPError, URLError
+from urllib.parse import urljoin, urlparse
 from urllib.request import Request, urlopen
-from urllib.error import URLError, HTTPError
 
 OUT_DIR = Path(__file__).parent / "data"
 USER_AGENT = "Mozilla/5.0 (compatible; HitmanWidgetFeed/1.0; +personal use script)"
+BROWSER_UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+              "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
 
 HITMAPS_HOME_API = "https://api.hitmaps.com/api/web/home"
 
@@ -34,8 +38,11 @@ TWITCH_DROPS_SOURCES = [
 ]
 
 
-def fetch(url: str) -> str:
-    req = Request(url, headers={"User-Agent": USER_AGENT})
+def fetch(url: str, browser: bool = False) -> str:
+    headers = {"User-Agent": BROWSER_UA if browser else USER_AGENT,
+               "Accept": "text/html,application/json;q=0.9,*/*;q=0.8",
+               "Accept-Language": "en-US,en;q=0.9"}
+    req = Request(url, headers=headers)
     with urlopen(req, timeout=20) as resp:
         return resp.read().decode("utf-8", errors="replace")
 
@@ -89,61 +96,89 @@ def build_elusive_targets():
     }
 
 
-def extract_post_links(news_html: str, base_url: str):
-    links = []
-    for pattern in (r'href="(/[a-z0-9\-/]*?/news/[^"#?]+)"', r'href="(/[a-z0-9\-/]*?/roadmaps/[^"#?]+)"',
-                    r'href="(/[a-z0-9\-/]*?/patch-notes/[^"#?]+)"'):
-        for m in re.finditer(pattern, news_html):
-            href = m.group(1)
-            if href.rstrip("/").endswith(("/news", "/roadmaps", "/patch-notes")):
-                continue
-            full = base_url + href
-            if full not in [l["url"] for l in links]:
-                links.append({"url": full})
+
+POST_KINDS = {"news": "News", "roadmaps": "Roadmap", "patch-notes": "Patch Notes", "blogs": "Blog Post"}
+
+
+def extract_post_links(news_html: str, base_url: str, prefix: str):
+    """prefix e.g. '/hitman'. Accepts relative and absolute hrefs, same game only."""
+    pat = re.compile(
+        r'href=["\'](?:https?://(?:www\.)?ioi\.dk)?(' + re.escape(prefix) +
+        r'/(?:news|roadmaps|patch-notes|blogs)/[^"\'#?\s]+)["\']')
+    links, seen = [], set()
+    for m in pat.finditer(news_html):
+        full = base_url + m.group(1).rstrip("/")
+        if full not in seen:
+            seen.add(full)
+            links.append({"url": full})
     return links
 
 
-def get_meta(html: str, key: str) -> str:
-    m = re.search(rf"meta-{re.escape(key)}:\s*(.+)", html)
-    return m.group(1).strip() if m else ""
+def get_meta(page: str, key: str) -> str:
+    k = re.escape(key)
+    for p in (
+        rf'<meta[^>]+(?:property|name)=["\']{k}["\'][^>]*content=["\']([^"\']*)["\']',
+        rf'<meta[^>]+content=["\']([^"\']*)["\'][^>]*(?:property|name)=["\']{k}["\']',
+    ):
+        m = re.search(p, page, re.IGNORECASE)
+        if m and m.group(1).strip():
+            return htmllib.unescape(m.group(1)).strip()
+    return ""
+
+
+def get_title(page: str) -> str:
+    t = get_meta(page, "og:title")
+    if t and t != "undefined":
+        return t
+    m = re.search(r"<h1[^>]*>(.*?)</h1>", page, re.DOTALL | re.IGNORECASE)
+    if m:
+        t = re.sub(r"<[^>]+>", " ", m.group(1))
+        t = " ".join(htmllib.unescape(t).split())
+        if t:
+            return t
+    m = re.search(r"<title>(.*?)</title>", page, re.DOTALL | re.IGNORECASE)
+    return " ".join(htmllib.unescape(m.group(1)).split()) if m else "Untitled"
 
 
 def build_news(max_per_source=8):
-    items = []
+    items, errors = [], []
     for src in IOI_NEWS_SOURCES:
+        prefix = urlparse(src["news_url"]).path.rsplit("/news", 1)[0]
         try:
-            listing_html = fetch(src["news_url"])
+            listing_html = fetch(src["news_url"], browser=True)
         except (URLError, HTTPError) as e:
             print(f"[news:{src['key']}] failed to fetch listing: {e}", file=sys.stderr)
+            errors.append(f"{src['key']}: {e}")
             continue
 
-        links = extract_post_links(listing_html, src["base_url"])[:max_per_source]
+        links = extract_post_links(listing_html, src["base_url"], prefix)[:max_per_source]
+        if not links:
+            msg = f"{src['key']}: no post links found in listing ({len(listing_html)} bytes)"
+            print(f"[news] {msg}", file=sys.stderr)
+            errors.append(msg)
 
         for link in links:
             url = link["url"]
             try:
-                post_html = fetch(url)
+                post_html = fetch(url, browser=True)
             except (URLError, HTTPError) as e:
                 print(f"[news:{src['key']}] failed to fetch post {url}: {e}", file=sys.stderr)
                 continue
 
-            title = get_meta(post_html, "og:title") or get_meta(post_html, "title") or "Untitled"
+            kind = next((v for k, v in POST_KINDS.items() if f"/{k}/" in url), "News")
             image = get_meta(post_html, "og:image")
-            kind = "Roadmap" if "/roadmaps/" in url else ("Patch Notes" if "/patch-notes/" in url else "News")
-
             items.append({
                 "game": src["label"],
                 "type": kind,
-                "title": title,
-                "image": image,
+                "title": get_title(post_html),
+                "image": urljoin(url, image) if image else "",
                 "url": url,
             })
 
-    return {
-        "generated": now_iso(),
-        "count": len(items),
-        "items": items,
-    }
+    out = {"generated": now_iso(), "count": len(items), "items": items}
+    if errors:
+        out["errors"] = errors
+    return out
 
 
 def parse_active_campaigns(html: str) -> list:
