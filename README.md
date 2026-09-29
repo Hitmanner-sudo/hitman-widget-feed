@@ -20,4 +20,4 @@ Install the APK and open the app. The instructions for adding the widgets are on
   
 ## How it works
 
-A script runs on a schedule and writes JSON files, and GitHub Pages serves them as static files. The app fetches those files directly and draws the widgets itself, refreshing every few minutes (news every 5).
+A script runs on a schedule and writes JSON files, and GitHub Pages serves them as static files. The app fetches those files directly and draws the widgets itself, refreshing every few minutes (renews every 5).
