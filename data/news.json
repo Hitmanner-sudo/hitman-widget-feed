@@ -1,5 +1,62 @@
 {
-  "generated": "2026-09-29T02:18:44.914576+00:00",
-  "count": 0,
-  "items": []
+  "generated": "2026-09-29T08:36:38.935981+00:00",
+  "count": 8,
+  "items": [
+    {
+      "game": "HITMAN",
+      "type": "Patch Notes",
+      "title": "Game Update | 3.280",
+      "image": "",
+      "url": "https://ioi.dk/hitman/patch-notes/2026/game-update-3-280"
+    },
+    {
+      "game": "HITMAN",
+      "type": "Roadmap",
+      "title": "HITMAN - Season of The Herbalist",
+      "image": "https://cms.ioi.dk/media/ftfjhiwi/hwoa_season_of_the_herbalist_roadmap_w-legals.jpg?width=1200",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist"
+    },
+    {
+      "game": "HITMAN",
+      "type": "News",
+      "title": "Snoop Dogg joins the World of Assassination",
+      "image": "",
+      "url": "https://ioi.dk/hitman/news/2026/snoop-dogg-joins-the-world-of-assassination"
+    },
+    {
+      "game": "007 First Light",
+      "type": "Patch Notes",
+      "title": "1.2.2 | Game Update",
+      "image": "",
+      "url": "https://ioi.dk/007firstlightgame/patch-notes/2026/1-2-2-game-update"
+    },
+    {
+      "game": "007 First Light",
+      "type": "Patch Notes",
+      "title": "1.2.1 | Game Update",
+      "image": "",
+      "url": "https://ioi.dk/007firstlightgame/patch-notes/2026/1-2-1-game-update"
+    },
+    {
+      "game": "007 First Light",
+      "type": "News",
+      "title": "Path Tracing now available for 007 First Light",
+      "image": "",
+      "url": "https://ioi.dk/007firstlightgame/news/2026/path-tracing-now-available-for-007-first-light"
+    },
+    {
+      "game": "007 First Light",
+      "type": "Blog Post",
+      "title": "Behind the Scenes of Path Tracing coming to 007 First Light",
+      "image": "",
+      "url": "https://ioi.dk/007firstlightgame/blogs/2026/behind-the-scenes-of-path-tracing-coming-to-007-first-light"
+    },
+    {
+      "game": "007 First Light",
+      "type": "Patch Notes",
+      "title": "1.1.1 | Game Update",
+      "image": "",
+      "url": "https://ioi.dk/007firstlightgame/patch-notes/2026/1-1-1-game-update"
+    }
+  ]
 }
