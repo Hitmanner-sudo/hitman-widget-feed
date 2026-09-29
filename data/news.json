@@ -1,12 +1,12 @@
 {
-  "generated": "2026-09-29T08:43:57.603513+00:00",
-  "count": 8,
+  "generated": "2026-09-29T08:51:04.383375+00:00",
+  "count": 3,
   "items": [
     {
       "game": "HITMAN",
       "type": "Patch Notes",
       "title": "Game Update | 3.280",
-      "image": "",
+      "image": "https://cms.ioi.dk/media/nkjnrdf1/game_update_1920x1080.jpg?width=2560",
       "url": "https://ioi.dk/hitman/patch-notes/2026/game-update-3-280"
     },
     {
@@ -20,43 +20,8 @@
       "game": "HITMAN",
       "type": "News",
       "title": "Snoop Dogg joins the World of Assassination",
-      "image": "",
+      "image": "https://cms.ioi.dk/media/ifmljm4f/herbalist_screenshot.jpg?width=2560",
       "url": "https://ioi.dk/hitman/news/2026/snoop-dogg-joins-the-world-of-assassination"
-    },
-    {
-      "game": "007 First Light",
-      "type": "Patch Notes",
-      "title": "1.2.2 | Game Update",
-      "image": "",
-      "url": "https://ioi.dk/007firstlightgame/patch-notes/2026/1-2-2-game-update"
-    },
-    {
-      "game": "007 First Light",
-      "type": "Patch Notes",
-      "title": "1.2.1 | Game Update",
-      "image": "",
-      "url": "https://ioi.dk/007firstlightgame/patch-notes/2026/1-2-1-game-update"
-    },
-    {
-      "game": "007 First Light",
-      "type": "News",
-      "title": "Path Tracing now available for 007 First Light",
-      "image": "",
-      "url": "https://ioi.dk/007firstlightgame/news/2026/path-tracing-now-available-for-007-first-light"
-    },
-    {
-      "game": "007 First Light",
-      "type": "Blog Post",
-      "title": "Behind the Scenes of Path Tracing coming to 007 First Light",
-      "image": "",
-      "url": "https://ioi.dk/007firstlightgame/blogs/2026/behind-the-scenes-of-path-tracing-coming-to-007-first-light"
-    },
-    {
-      "game": "007 First Light",
-      "type": "Patch Notes",
-      "title": "1.1.1 | Game Update",
-      "image": "",
-      "url": "https://ioi.dk/007firstlightgame/patch-notes/2026/1-1-1-game-update"
     }
   ]
 }
