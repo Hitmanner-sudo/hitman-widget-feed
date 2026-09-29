@@ -19,7 +19,6 @@ HITMAPS_HOME_API = "https://api.hitmaps.com/api/web/home"
 
 IOI_NEWS_SOURCES = [
     {"key": "hitman", "label": "HITMAN", "news_url": "https://ioi.dk/hitman/news", "base_url": "https://ioi.dk"},
-    {"key": "007", "label": "007 First Light", "news_url": "https://ioi.dk/007firstlightgame/news", "base_url": "https://ioi.dk"},
 ]
 
 TWITCH_DROPS_SOURCES = [
@@ -140,6 +139,33 @@ def get_title(page: str) -> str:
     return " ".join(htmllib.unescape(m.group(1)).split()) if m else "Untitled"
 
 
+IMG_JUNK = ("logo", "icon", "sprite", "pixel", "avatar", "blank", "favicon")
+
+
+def first_page_image(page: str, url: str) -> str:
+    """og:image / twitter:image, else the first real picture on the page."""
+    for key in ("og:image", "twitter:image"):
+        img = get_meta(page, key)
+        if img and img != "undefined":
+            return urljoin(url, img)
+    for m in re.finditer(r"<img\b[^>]*>", page, re.IGNORECASE):
+        tag = m.group(0)
+        src = ""
+        for attr in ("src", "data-src", "data-lazy-src", "srcset", "data-srcset"):
+            a = re.search(rf'\b{attr}=["\']([^"\']+)["\']', tag, re.IGNORECASE)
+            if a and not a.group(1).startswith("data:"):
+                src = a.group(1).split(",")[0].strip().split(" ")[0]
+                break
+        if not src:
+            continue
+        src = urljoin(url, htmllib.unescape(src))
+        path = urlparse(src).path.lower()
+        if path.endswith((".svg", ".gif")) or any(j in src.lower() for j in IMG_JUNK):
+            continue
+        return src
+    return ""
+
+
 def build_news(max_per_source=8):
     items, errors = [], []
     for src in IOI_NEWS_SOURCES:
@@ -166,12 +192,12 @@ def build_news(max_per_source=8):
                 continue
 
             kind = next((v for k, v in POST_KINDS.items() if f"/{k}/" in url), "News")
-            image = get_meta(post_html, "og:image")
+            image = first_page_image(post_html, url)
             items.append({
                 "game": src["label"],
                 "type": kind,
                 "title": get_title(post_html),
-                "image": urljoin(url, image) if image else "",
+                "image": image,
                 "url": url,
             })
 
