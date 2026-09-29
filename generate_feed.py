@@ -74,7 +74,7 @@ def build_elusive_targets():
             "begin": et.get("beginningTime"),
             "end": et.get("endingTime"),
             "image": et.get("tileUrl", ""),
-            "url": f"https://www.hitmaps.com{et.get('missionUrl', '')}",
+            "url": f"https://www.hitmaps.com{et.get('missionUrl', '').rstrip('/')}",
         }
 
         if begin <= now <= end:
