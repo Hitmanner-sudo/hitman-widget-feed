@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-01T11:48:42.567124+00:00",
+  "generated": "2026-10-01T17:31:04.006635+00:00",
   "items": [
     {
       "game": "HITMAN World of Assassination",
@@ -27,13 +27,24 @@
     {
       "game": "007 First Light",
       "slug": "007-first-light",
-      "campaign_image": "https://static-cdn.jtvnw.net/twitch-quests-assets/CAMPAIGN/b33d3ac7-d412-420b-bb6c-6a59dbf4afc7.jpeg",
+      "campaign_image": "https://static-cdn.jtvnw.net/twitch-quests-assets/CAMPAIGN/61bd4181-77eb-4fc0-a3b2-21a18143be34.jpeg",
       "account_link_url": "https://account.ioi.dk/",
-      "soonest_end_iso": null,
-      "end_human": null,
-      "campaign_count": 0,
+      "soonest_end_iso": "2026-10-16T16:59:59.999000+00:00",
+      "end_human": "Oct 16",
+      "campaign_count": 1,
       "total_reward_count": 0,
-      "campaigns": [],
+      "campaigns": [
+        {
+          "name": "Extended Operations",
+          "owner": "IO Interactive",
+          "dates_text": "Oct 1 – Oct 16",
+          "end_iso": "2026-10-16T16:59:59.999000+00:00",
+          "channels": "All Channels",
+          "description": "Earning this reward is simple. You only need to link your IOI Account to your Twitch account and then watch a 007 FIrst Light stream on Twitch during the drop campaign duration.",
+          "rewards": [],
+          "reward_count": 0
+        }
+      ],
       "url": "https://twitchdrops.app/game/007-first-light"
     }
   ],
