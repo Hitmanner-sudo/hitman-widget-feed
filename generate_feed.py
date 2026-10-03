@@ -4,7 +4,7 @@ import html as htmllib
 import json
 import re
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.parse import urljoin, urlparse
@@ -74,7 +74,7 @@ def build_elusive_targets():
             "begin": et.get("beginningTime"),
             "end": et.get("endingTime"),
             "image": et.get("tileUrl", ""),
-            "url": f"https://www.hitmaps.com{et.get('missionUrl', '').rstrip('/')}",
+            "url": f"https://www.hitmaps.com{et.get('missionUrl', '')}",
         }
 
         if begin <= now <= end:
@@ -204,6 +204,202 @@ def build_news(max_per_source=8):
     out = {"generated": now_iso(), "count": len(items), "items": items}
     if errors:
         out["errors"] = errors
+    return out
+
+
+# ---------------- Roadmap ("what's next up") ----------------
+
+MONTHS = {"jan": 1, "feb": 2, "mar": 3, "apr": 4, "may": 5, "jun": 6, "jul": 7,
+          "aug": 8, "sep": 9, "oct": 10, "nov": 11, "dec": 12}
+_M = r"(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)"
+RANGE_RE = re.compile(
+    rf"\b({_M})\.?\s+(\d{{1,2}})(?:st|nd|rd|th)?(?:,?\s+(20\d\d))?"
+    rf"(?:\s*[-\u2013\u2014]\s*(?:({_M})\.?\s+)?(\d{{1,2}})(?:st|nd|rd|th)?(?:,?\s+(20\d\d))?)?",
+    re.IGNORECASE)
+BASE_RE = re.compile(rf"\b({_M})[a-z]*\.?\s+(\d{{1,2}}),?\s+(20\d\d)", re.IGNORECASE)
+TITLE_STOP = {"new challenge", "ioi account unlock", "premium content", "new featured contract",
+              "how to link your ioi account to receive twitch drops"}
+
+
+def html_to_lines(page: str):
+    """Visible text of a page, one block per line, with image URLs kept as [[IMG:url]] markers."""
+    page = re.sub(r"(?is)<(script|style|noscript)\b.*?</\1>", " ", page)
+
+    def img(m):
+        tag = m.group(0)
+        for attr in ("src", "data-src", "data-lazy-src", "srcset", "data-srcset"):
+            a = re.search(rf'\b{attr}=["\']([^"\']+)["\']', tag, re.IGNORECASE)
+            if a and not a.group(1).startswith("data:"):
+                return "\n[[IMG:" + a.group(1).split(",")[0].strip().split(" ")[0] + "]]\n"
+        return " "
+
+    page = re.sub(r"(?is)<img\b[^>]*>", img, page)
+    page = re.sub(r"(?i)<br\s*/?>|</?(?:p|div|h[1-6]|li|ul|ol|blockquote|section|article|tr|td|header|footer)\b[^>]*>", "\n", page)
+    page = re.sub(r"<[^>]+>", "", page)
+    page = htmllib.unescape(page).replace("\xa0", " ")
+    lines = []
+    for ln in page.split("\n"):
+        ln = " ".join(ln.split())
+        if ln:
+            lines.append(ln)
+    return lines
+
+
+def _clean_title(t: str) -> str:
+    t = re.sub(r"[*\[\]|\u2022]", " ", t)
+    t = re.sub(r"(?i)^twitch drop no\.?\s*\d+\s*:\s*", "", t)
+    t = " ".join(t.split()).strip(" -\u2013\u2014:")
+    if t.isupper():
+        t = t.title()
+    return t
+
+
+def _section_kind(section: str) -> str:
+    s = section.lower()
+    if "twitch" in s:
+        return "Twitch Drop"
+    if "elusive" in s and "dlc" not in s and "expanded" not in s:
+        return "Elusive Target"
+    if "challenge" in s:
+        return "Challenge"
+    if "featured" in s or "contract" in s:
+        return "Featured Contracts"
+    if "event" in s:
+        return "Event"
+    if "account" in s:
+        return "IOI Account"
+    if "premium" in s or "dlc" in s:
+        return "Premium"
+    return section.title()
+
+
+def _is_section(ln: str) -> bool:
+    return (5 <= len(ln) <= 70 and ln.upper() == ln and not re.search(r"\d", ln)
+            and re.search(r"[A-Z]{3}", ln) is not None and ln not in ("GO TO TOP", "CLOSE", "PREVIOUS", "NEXT"))
+
+
+def parse_roadmap(page: str, url: str):
+    lines = html_to_lines(page)
+    base = datetime.now(timezone.utc).date()
+    start_i = 0
+    for i, ln in enumerate(lines[:300]):
+        if re.search(r"\broadmaps?\b", ln, re.IGNORECASE):
+            m = BASE_RE.search(ln)
+            if m:
+                base = datetime(int(m.group(3)), MONTHS[m.group(1)[:3].lower()], int(m.group(2))).date()
+                start_i = i + 1
+                break
+
+    def mk(mon, day, year, ref_year=None):
+        mon = MONTHS[mon[:3].lower()]
+        y = int(year) if year else (ref_year or base.year)
+        if not year and ref_year is None and mon < base.month - 2:
+            y += 1
+        try:
+            return datetime(y, mon, int(day)).date()
+        except ValueError:
+            return None
+
+    def rng(m):
+        s = mk(m.group(1), m.group(2), m.group(3))
+        if s is None:
+            return None, None
+        e = None
+        if m.group(5):
+            e = mk(m.group(4) or m.group(1), m.group(5), m.group(6), s.year)
+            if e is not None and e < s:
+                if s.month >= 10 and e.month <= 3:
+                    e = mk(m.group(4) or m.group(1), m.group(5), None, s.year + 1)
+                else:
+                    e = None
+        return s, e
+
+    events = []
+    section, hd, after_heading, pending_img, last_short = "", None, False, "", ""
+
+    def add(title, s, e, kind=None):
+        nonlocal pending_img
+        title = _clean_title(title)
+        if (not title or title.lower() in TITLE_STOP or s is None or len(title.split()) > 9
+                or title.lower().startswith(("please note", "note:", "note "))):
+            return
+        events.append({"title": title, "kind": kind or _section_kind(section), "section": section.title(),
+                       "start": s.isoformat(), "end": e.isoformat() if e else None,
+                       "image": pending_img, "url": url})
+        pending_img = ""
+
+    for ln in lines[start_i:]:
+        if ln.lower().startswith("go to top"):
+            break
+        im = re.fullmatch(r"\[\[IMG:(.+)\]\]", ln)
+        if im:
+            pending_img = urljoin(url, im.group(1))
+            continue
+        if _is_section(ln):
+            section, hd, after_heading, last_short = ln, None, False, ""
+            continue
+        m = RANGE_RE.search(ln)
+        if m:
+            s, e = rng(m)
+            before = ln[:m.start()]
+            if before.rstrip().endswith("["):
+                title = _clean_title(before)
+            else:
+                title = _clean_title(before + " " + ln[m.end():])
+            if not title:
+                hd, after_heading = (s, e), True
+                continue
+            after_heading = False
+            if len(title) <= 80:
+                add(title, s, e)
+                last_short = title
+            elif re.search(r"\bbetween\b", ln, re.IGNORECASE) and last_short:
+                add(last_short, s, e, "Twitch Drop" if "twitch drop" in last_short.lower() else None)
+            continue
+        short = len(ln) <= 80 and not ln.endswith((".", "!", "?", ":"))
+        if (after_heading and hd and short
+                and not ln.lower().startswith(("note", "reward", "for ", "twitch drop"))):
+            add(ln, hd[0], hd[1])
+        after_heading = False
+        if len(ln) <= 100:
+            last_short = ln
+    best = {}
+    for ev in events:
+        k = (ev["title"].lower(), ev["start"])
+        if k not in best or (best[k]["end"] is None and ev["end"]):
+            best[k] = ev
+    return list(best.values())
+
+
+def build_roadmap(max_roadmaps=3):
+    today = datetime.now(timezone.utc).date()
+    roadmaps, events, errors = [], {}, []
+    for src in IOI_NEWS_SOURCES:
+        prefix = urlparse(src["news_url"]).path.rsplit("/news", 1)[0]
+        try:
+            listing = fetch(src["news_url"], browser=True)
+        except (URLError, HTTPError) as e:
+            errors.append(f"{src['key']}: {e}")
+            continue
+        links = [l["url"] for l in extract_post_links(listing, src["base_url"], prefix) if "/roadmaps/" in l["url"]]
+        for url in links[:max_roadmaps]:
+            try:
+                page = fetch(url, browser=True)
+            except (URLError, HTTPError) as e:
+                errors.append(f"{url}: {e}")
+                continue
+            evs = parse_roadmap(page, url)
+            roadmaps.append({"title": get_title(page), "url": url, "events": len(evs)})
+            for ev in evs:  # newer roadmaps are listed first and win
+                events.setdefault((ev["title"].lower(), ev["start"]), ev)
+    cutoff = (today - timedelta(days=1)).isoformat()
+    keep = [ev for ev in events.values() if (ev["end"] or ev["start"]) >= cutoff]
+    keep.sort(key=lambda e: (e["start"], e["title"]))
+    out = {"generated": now_iso(), "count": len(keep), "roadmaps": roadmaps, "events": keep}
+    if errors:
+        out["errors"] = errors
+    elif not roadmaps:
+        out["errors"] = ["no roadmap links found in listing"]
     return out
 
 
@@ -390,6 +586,7 @@ def main():
     write_json(OUT_DIR / "elusive_targets.json", build_elusive_targets())
     write_json(OUT_DIR / "news.json", build_news())
     write_json(OUT_DIR / "drops.json", build_drops())
+    write_json(OUT_DIR / "roadmap.json", build_roadmap())
 
 
 if __name__ == "__main__":
