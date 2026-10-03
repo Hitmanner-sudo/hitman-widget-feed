@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import html as htmllib
+import http.client
 import json
 import re
 import sys
@@ -37,6 +38,9 @@ TWITCH_DROPS_SOURCES = [
 ]
 
 
+FETCH_ERRORS = (URLError, HTTPError, OSError, ValueError, http.client.HTTPException)
+
+
 def fetch(url: str, browser: bool = False) -> str:
     headers = {"User-Agent": BROWSER_UA if browser else USER_AGENT,
                "Accept": "text/html,application/json;q=0.9,*/*;q=0.8",
@@ -54,7 +58,7 @@ def build_elusive_targets():
     try:
         raw = fetch(HITMAPS_HOME_API)
         data = json.loads(raw)
-    except (URLError, HTTPError, json.JSONDecodeError) as e:
+    except FETCH_ERRORS + (json.JSONDecodeError,) as e:
         print(f"[et] fetch failed: {e}", file=sys.stderr)
         return {"generated": now_iso(), "ongoing": [], "incoming": [], "error": str(e)}
 
@@ -172,7 +176,7 @@ def build_news(max_per_source=8):
         prefix = urlparse(src["news_url"]).path.rsplit("/news", 1)[0]
         try:
             listing_html = fetch(src["news_url"], browser=True)
-        except (URLError, HTTPError) as e:
+        except FETCH_ERRORS as e:
             print(f"[news:{src['key']}] failed to fetch listing: {e}", file=sys.stderr)
             errors.append(f"{src['key']}: {e}")
             continue
@@ -187,7 +191,7 @@ def build_news(max_per_source=8):
             url = link["url"]
             try:
                 post_html = fetch(url, browser=True)
-            except (URLError, HTTPError) as e:
+            except FETCH_ERRORS as e:
                 print(f"[news:{src['key']}] failed to fetch post {url}: {e}", file=sys.stderr)
                 continue
 
@@ -378,14 +382,14 @@ def build_roadmap(max_roadmaps=3):
         prefix = urlparse(src["news_url"]).path.rsplit("/news", 1)[0]
         try:
             listing = fetch(src["news_url"], browser=True)
-        except (URLError, HTTPError) as e:
+        except FETCH_ERRORS as e:
             errors.append(f"{src['key']}: {e}")
             continue
         links = [l["url"] for l in extract_post_links(listing, src["base_url"], prefix) if "/roadmaps/" in l["url"]]
         for url in links[:max_roadmaps]:
             try:
                 page = fetch(url, browser=True)
-            except (URLError, HTTPError) as e:
+            except FETCH_ERRORS as e:
                 errors.append(f"{url}: {e}")
                 continue
             evs = parse_roadmap(page, url)
@@ -551,7 +555,7 @@ def build_drops() -> dict:
         url = f"https://twitchdrops.app/game/{src['slug']}"
         try:
             page_html = fetch(url)
-        except (URLError, HTTPError) as e:
+        except FETCH_ERRORS as e:
             print(f"[drops:{src['key']}] failed to fetch page: {e}", file=sys.stderr)
             items.append({
                 "game": src["label"],
@@ -583,10 +587,24 @@ def write_json(path: Path, data: dict):
 
 def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    write_json(OUT_DIR / "elusive_targets.json", build_elusive_targets())
-    write_json(OUT_DIR / "news.json", build_news())
-    write_json(OUT_DIR / "drops.json", build_drops())
-    write_json(OUT_DIR / "roadmap.json", build_roadmap())
+    jobs = [
+        ("elusive_targets.json", build_elusive_targets, {"ongoing": [], "incoming": []}),
+        ("news.json", build_news, {"count": 0, "items": []}),
+        ("drops.json", build_drops, {"items": []}),
+        ("roadmap.json", build_roadmap, {"count": 0, "events": []}),
+    ]
+    failed = []
+    for name, fn, fallback in jobs:
+        try:
+            write_json(OUT_DIR / name, fn())
+        except Exception as e:  # one broken source must not stop the others
+            import traceback
+            traceback.print_exc()
+            failed.append(f"{name}: {type(e).__name__}: {e}")
+            if not (OUT_DIR / name).exists():
+                write_json(OUT_DIR / name, {"generated": now_iso(), **fallback, "errors": [f"{type(e).__name__}: {e}"]})
+    if failed:
+        print("FAILED (kept previous data):", *failed, sep="\n  ", file=sys.stderr)
 
 
 if __name__ == "__main__":
