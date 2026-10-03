@@ -1,21 +1,21 @@
 {
-  "generated": "2026-10-03T21:39:00.634371+00:00",
-  "count": 34,
+  "generated": "2026-10-03T21:45:23.708835+00:00",
+  "count": 7,
   "roadmaps": [
     {
       "title": "HITMAN - Season of The Herbalist",
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist",
-      "events": 18
+      "events": 17
     },
     {
       "title": "HITMAN - Season of The Wizard",
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-wizard",
-      "events": 20
+      "events": 19
     },
     {
       "title": "HITMAN - Season of the Royal Ace",
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-royal-ace",
-      "events": 11
+      "events": 8
     }
   ],
   "events": [
@@ -39,12 +39,13 @@
     },
     {
       "title": "The Undying Returns",
-      "kind": "Premium",
+      "kind": "Elusive Target",
       "section": "Premium Content",
-      "start": "2026-09-25",
+      "start": "2026-09-28",
       "end": "2026-10-25",
       "image": "https://cms.ioi.dk/media/f4mpoewo/website_blogpost_1920_02.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist"
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist",
+      "source": "hitmaps"
     },
     {
       "title": "The Ascensionist",
@@ -53,7 +54,8 @@
       "start": "2026-10-02",
       "end": "2026-10-11",
       "image": "https://cms.ioi.dk/media/nn5gh1jj/website_blogpost_1920_05.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist"
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist",
+      "source": "hitmaps"
     },
     {
       "title": "The Purple Streak Crowbar",
@@ -69,9 +71,10 @@
       "kind": "Elusive Target",
       "section": "Returning Elusive Targets",
       "start": "2026-10-09",
-      "end": "2026-10-11",
+      "end": "2026-10-18",
       "image": "https://cms.ioi.dk/media/oapjuhtl/website_blogpost_1920_06.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist"
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist",
+      "source": "hitmaps"
     },
     {
       "title": "The Bad Boy",
@@ -80,250 +83,8 @@
       "start": "2026-10-16",
       "end": "2026-10-25",
       "image": "https://cms.ioi.dk/media/xaefkxnc/website_blogpost_1920_07.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist"
-    },
-    {
-      "title": "Back To Basics",
-      "kind": "Challenge",
-      "section": "New Challenges",
-      "start": "2027-04-27",
-      "end": null,
-      "image": "https://cms.ioi.dk/media/kyxpislg/website_blogpost_1920_09.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-royal-ace"
-    },
-    {
-      "title": "Dartmoor Garden Show",
-      "kind": "Event",
-      "section": "Returning Content - Events",
-      "start": "2027-04-27",
-      "end": "2027-05-25",
-      "image": "https://cms.ioi.dk/media/ocbadgua/website_blogpost_1920_11.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-royal-ace"
-    },
-    {
-      "title": "Shrimpy’s By the Book",
-      "kind": "Featured Contracts",
-      "section": "New Featured Contract Packs",
-      "start": "2027-04-27",
-      "end": null,
-      "image": "https://cms.ioi.dk/media/14cbqpol/website_blogpost_1920_13.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-royal-ace"
-    },
-    {
-      "title": "The Poker Face Duck",
-      "kind": "Premium",
-      "section": "Premium Content",
-      "start": "2027-04-27",
-      "end": "2027-05-25",
-      "image": "https://cms.ioi.dk/media/ljsbwjqt/website_blogpost_1920_12.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-royal-ace"
-    },
-    {
-      "title": "between .",
-      "kind": "Premium",
-      "section": "Premium Content",
-      "start": "2027-04-27",
-      "end": null,
-      "image": "https://cms.ioi.dk/media/kflanclx/website_blogpost_1920_14.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-royal-ace"
-    },
-    {
-      "title": "The Rage",
-      "kind": "Elusive Target",
-      "section": "Elusive Targets",
-      "start": "2027-05-01",
-      "end": null,
-      "image": "https://cms.ioi.dk/media/lrhdvhc1/website_blogpost_1920_04.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-royal-ace"
-    },
-    {
-      "title": "between .",
-      "kind": "Premium",
-      "section": "Premium Content",
-      "start": "2027-05-07",
-      "end": null,
-      "image": "https://cms.ioi.dk/media/kdee1rc4/website_blogpost_1920_15.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-royal-ace"
-    },
-    {
-      "title": "The Deceivers",
-      "kind": "Elusive Target",
-      "section": "Elusive Targets",
-      "start": "2027-05-08",
-      "end": "2027-05-17",
-      "image": "https://cms.ioi.dk/media/tkuloigs/website_blogpost_1920_05.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-royal-ace"
-    },
-    {
-      "title": "The Revolutionary",
-      "kind": "Elusive Target",
-      "section": "Elusive Targets",
-      "start": "2027-05-15",
-      "end": "2027-05-24",
-      "image": "https://cms.ioi.dk/media/wnglnc5k/website_blogpost_1920_06.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-royal-ace"
-    },
-    {
-      "title": "The Liability",
-      "kind": "Elusive Target",
-      "section": "Elusive Targets",
-      "start": "2027-05-22",
-      "end": "2027-05-31",
-      "image": "https://cms.ioi.dk/media/dchnjse1/website_blogpost_1920_07.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-royal-ace"
-    },
-    {
-      "title": "Stirred Not Shaken PT. 1 by YupItsPurple",
-      "kind": "Featured Contracts",
-      "section": "Featured Contracts",
-      "start": "2027-06-05",
-      "end": null,
-      "image": "https://cms.ioi.dk/media/qkgpc5bl/banner1.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-wizard"
-    },
-    {
-      "title": "The Bowtie Duck",
-      "kind": "Crossover Rewards",
-      "section": "Crossover Rewards",
-      "start": "2027-06-05",
-      "end": "2027-06-10",
-      "image": "https://cms.ioi.dk/media/3htjfgl4/website_blogpost_1920_13.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-wizard"
-    },
-    {
-      "title": "The Muay Thai Duck",
-      "kind": "IOI Account",
-      "section": "Ioi Account Rewards",
-      "start": "2027-06-05",
-      "end": null,
-      "image": "https://cms.ioi.dk/media/w3zpcxww/website_blogpost_1920_17-2.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-wizard"
-    },
-    {
-      "title": "The Timeless Tuxedo",
-      "kind": "Crossover Rewards",
-      "section": "Crossover Rewards",
-      "start": "2027-06-05",
-      "end": null,
-      "image": "https://cms.ioi.dk/media/ylnhi33f/website_blogpost_1920_14.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-wizard"
-    },
-    {
-      "title": "The Vuvuzela Duck",
-      "kind": "Twitch Drop",
-      "section": "Twitch Drops",
-      "start": "2027-06-11",
-      "end": "2027-06-18",
-      "image": "https://cms.ioi.dk/media/a2tj2uku/website_blogpost_1920_17.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-wizard"
-    },
-    {
-      "title": "The Ex-Dictators",
-      "kind": "Elusive Target",
-      "section": "Returning Elusive Targets",
-      "start": "2027-06-24",
-      "end": "2027-08-02",
-      "image": "https://cms.ioi.dk/media/eg2kbxls/website_blogpost_1920_07.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-wizard"
-    },
-    {
-      "title": "The Gunrunner",
-      "kind": "Elusive Target",
-      "section": "Returning Elusive Targets",
-      "start": "2027-06-26",
-      "end": "2027-07-05",
-      "image": "https://cms.ioi.dk/media/0ljpe3nj/website_blogpost_1920_03.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-wizard"
-    },
-    {
-      "title": "The Purple Streak Swimwear",
-      "kind": "Twitch Drop",
-      "section": "Twitch Drops",
-      "start": "2027-06-29",
-      "end": "2027-07-05",
-      "image": "https://cms.ioi.dk/media/r52ah4k2/website_blogpost_1920_18.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-wizard"
-    },
-    {
-      "title": "The Stowaway",
-      "kind": "Elusive Target",
-      "section": "Returning Elusive Targets",
-      "start": "2027-07-03",
-      "end": "2027-07-12",
-      "image": "https://cms.ioi.dk/media/inaja5ci/website_blogpost_1920_06.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-wizard"
-    },
-    {
-      "title": "Stirred Not Shaken PT. 2 by The Elite Institute",
-      "kind": "Featured Contracts",
-      "section": "Featured Contracts",
-      "start": "2027-07-06",
-      "end": null,
-      "image": "https://cms.ioi.dk/media/5zuguv0b/banner2.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-wizard"
-    },
-    {
-      "title": "The Banger Duck",
-      "kind": "IOI Account",
-      "section": "Ioi Account Rewards",
-      "start": "2027-07-06",
-      "end": null,
-      "image": "https://cms.ioi.dk/media/xjopcmly/website_blogpost_1920_17-3.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-wizard"
-    },
-    {
-      "title": "The Drop featuring Dimitiri Vegas",
-      "kind": "Premium",
-      "section": "Premium Content",
-      "start": "2027-07-06",
-      "end": "2027-07-26",
-      "image": "https://cms.ioi.dk/media/h0mnppeq/website_blogpost_1920_02-1.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-wizard"
-    },
-    {
-      "title": "The Procurers",
-      "kind": "Elusive Target",
-      "section": "Returning Elusive Targets",
-      "start": "2027-07-17",
-      "end": "2027-07-26",
-      "image": "https://cms.ioi.dk/media/svjpoo0e/website_blogpost_1920_04.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-wizard"
-    },
-    {
-      "title": "Eminem vs Slim Shady",
-      "kind": "Premium",
-      "section": "Premium Content",
-      "start": "2027-07-27",
-      "end": "2027-08-23",
-      "image": "https://cms.ioi.dk/media/3myfr3g1/website_blogpost_1920_02.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-wizard"
-    },
-    {
-      "title": "The Art of Mayhem by STR33T SURGE0N",
-      "kind": "Featured Contracts",
-      "section": "Featured Contracts",
-      "start": "2027-07-27",
-      "end": null,
-      "image": "https://cms.ioi.dk/media/hbfpjp3x/website_blogpost_1920_16.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-wizard"
-    },
-    {
-      "title": "The Chainsaw Duck",
-      "kind": "IOI Account",
-      "section": "Ioi Account Rewards",
-      "start": "2027-07-27",
-      "end": null,
-      "image": "https://cms.ioi.dk/media/rsyog1z5/website_blogpost_1920_17-4.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-wizard"
-    },
-    {
-      "title": "The Purple Streak Lockpick",
-      "kind": "Twitch Drop",
-      "section": "Twitch Drops",
-      "start": "2027-07-27",
-      "end": "2027-08-09",
-      "image": "https://cms.ioi.dk/media/ju4n4m4e/website_blogpost_1920_17-1.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-wizard"
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist",
+      "source": "hitmaps"
     }
   ]
 }
