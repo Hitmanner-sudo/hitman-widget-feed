@@ -19,7 +19,7 @@ BROWSER_UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
 HITMAPS_HOME_API = "https://api.hitmaps.com/api/web/home"
 
 IOI_NEWS_SOURCES = [
-    {"key": "hitman", "label": "HITMAN", "news_url": "https://ioi.dk/hitman/news", "base_url": "https://ioi.dk"},
+    {"key": "hitman", "label": "HITMAN", "news_url": "https://ioi.dk/hitman", "base_url": "https://ioi.dk"},
 ]
 
 TWITCH_DROPS_SOURCES = [
@@ -170,7 +170,7 @@ def first_page_image(page: str, url: str) -> str:
     return ""
 
 
-def build_news(max_per_source=8):
+def build_news(max_per_source=10):
     items, errors = [], []
     for src in IOI_NEWS_SOURCES:
         prefix = urlparse(src["news_url"]).path.rsplit("/news", 1)[0]
