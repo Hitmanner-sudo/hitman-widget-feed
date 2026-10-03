@@ -284,15 +284,17 @@ def _is_section(ln: str) -> bool:
 
 def parse_roadmap(page: str, url: str):
     lines = html_to_lines(page)
-    base = datetime.now(timezone.utc).date()
+    base = None
     start_i = 0
     for i, ln in enumerate(lines[:300]):
-        if re.search(r"\broadmaps?\b", ln, re.IGNORECASE):
-            m = BASE_RE.search(ln)
-            if m:
-                base = datetime(int(m.group(3)), MONTHS[m.group(1)[:3].lower()], int(m.group(2))).date()
-                start_i = i + 1
-                break
+        m = BASE_RE.search(ln)
+        if m and any(re.search(r"\broadmaps?\b", x, re.IGNORECASE) for x in lines[max(0, i - 2):i + 2]):
+            base = datetime(int(m.group(3)), MONTHS[m.group(1)[:3].lower()], int(m.group(2))).date()
+            start_i = i + 1
+            break
+    if base is None:  # no publish date found: trust the year in the URL and never roll forward
+        ym = re.search(r"/roadmaps/(20\d\d)/", url)
+        base = datetime(int(ym.group(1)) if ym else datetime.now(timezone.utc).year, 1, 1).date()
 
     def mk(mon, day, year, ref_year=None):
         mon = MONTHS[mon[:3].lower()]
@@ -325,6 +327,7 @@ def parse_roadmap(page: str, url: str):
         nonlocal pending_img
         title = _clean_title(title)
         if (not title or title.lower() in TITLE_STOP or s is None or len(title.split()) > 9
+                or not re.search(r"[A-Za-z]{3,}", title) or title.lower().startswith("between")
                 or title.lower().startswith(("please note", "note:", "note "))):
             return
         events.append({"title": title, "kind": kind or _section_kind(section), "section": section.title(),
@@ -353,6 +356,11 @@ def parse_roadmap(page: str, url: str):
             if not title:
                 hd, after_heading = (s, e), True
                 continue
+            if not re.search(r"[A-Za-z]{3,}", re.sub(r"(?i)\b(between|from|until|during|ends?|starts?|on)\b", "", title)):
+                if last_short:
+                    add(last_short, s, e, "Twitch Drop" if "twitch drop" in last_short.lower() else None)
+                after_heading = False
+                continue
             after_heading = False
             if len(title) <= 80:
                 add(title, s, e)
@@ -375,7 +383,63 @@ def parse_roadmap(page: str, url: str):
     return list(best.values())
 
 
-def build_roadmap(max_roadmaps=3):
+def _norm_name(n: str) -> str:
+    n = re.sub(r"\s*\([^)]*\)\s*$", "", n or "")
+    n = re.sub(r"(?i)\s*[-\u2013\u2014:]?\s*year\s*\d+\s*$", "", n)
+    n = re.sub(r"\s*#\d+\s*$", "", n).lower().strip()
+    n = re.sub(r"^the\s+", "", n)
+    return re.sub(r"[^a-z0-9]+", "", n).rstrip("s")
+
+
+def _day(iso):
+    try:
+        return datetime.fromisoformat((iso or "").replace("Z", "+00:00")).date()
+    except ValueError:
+        return None
+
+
+def cross_reference(events, et, drops):
+    """Trust HITMAPS (exact Elusive Target times) and twitchdrops.app (exact drop end) over the roadmap text."""
+    if et:
+        for e in (et.get("ongoing") or []) + (et.get("incoming") or []):
+            b, en = _day(e.get("begin")), _day(e.get("end"))
+            if not b:
+                continue
+            key = _norm_name(e.get("name", ""))
+            hit = None
+            for ev in events:
+                if _norm_name(ev["title"]) == key and abs((datetime.fromisoformat(ev["start"]).date() - b).days) <= 6:
+                    hit = ev
+                    break
+            if hit:
+                hit.update(start=b.isoformat(), end=en.isoformat() if en else hit["end"],
+                           kind="Elusive Target", source="hitmaps")
+                if not hit.get("image") and e.get("image"):
+                    hit["image"] = e["image"]
+            else:
+                events.append({"title": re.sub(r"(\s*(\([^)]*\)|#\d+|[-\u2013\u2014]\s*Year\s*\d+))+\s*$", "", e.get("name", "")).strip() or "Elusive Target",
+                               "kind": "Elusive Target", "section": "Elusive Targets",
+                               "start": b.isoformat(), "end": en.isoformat() if en else None,
+                               "image": e.get("image", ""), "url": e.get("url", ""), "source": "hitmaps"})
+    if drops:
+        for item in drops.get("items") or []:
+            if "hitman" not in (item.get("slug") or ""):
+                continue
+            for camp in item.get("campaigns") or []:
+                end = _day(camp.get("end_iso"))
+                for rw in camp.get("rewards") or []:
+                    key = _norm_name(rw.get("name", ""))
+                    for ev in events:
+                        if ev["kind"] == "Twitch Drop" and _norm_name(ev["title"]) == key:
+                            if end:
+                                ev["end"] = end.isoformat()
+                            ev["source"] = "twitchdrops"
+                            if not ev.get("image") and rw.get("image"):
+                                ev["image"] = rw["image"]
+    return events
+
+
+def build_roadmap(max_roadmaps=3, et=None, drops=None):
     today = datetime.now(timezone.utc).date()
     roadmaps, events, errors = [], {}, []
     for src in IOI_NEWS_SOURCES:
@@ -396,8 +460,9 @@ def build_roadmap(max_roadmaps=3):
             roadmaps.append({"title": get_title(page), "url": url, "events": len(evs)})
             for ev in evs:  # newer roadmaps are listed first and win
                 events.setdefault((ev["title"].lower(), ev["start"]), ev)
+    all_events = cross_reference(list(events.values()), et, drops)
     cutoff = (today - timedelta(days=1)).isoformat()
-    keep = [ev for ev in events.values() if (ev["end"] or ev["start"]) >= cutoff]
+    keep = [ev for ev in all_events if (ev["end"] or ev["start"]) >= cutoff]
     keep.sort(key=lambda e: (e["start"], e["title"]))
     out = {"generated": now_iso(), "count": len(keep), "roadmaps": roadmaps, "events": keep}
     if errors:
@@ -594,9 +659,15 @@ def main():
         ("roadmap.json", build_roadmap, {"count": 0, "events": []}),
     ]
     failed = []
+    results = {}
     for name, fn, fallback in jobs:
         try:
-            write_json(OUT_DIR / name, fn())
+            if name == "roadmap.json":
+                data = fn(et=results.get("elusive_targets.json"), drops=results.get("drops.json"))
+            else:
+                data = fn()
+            results[name] = data
+            write_json(OUT_DIR / name, data)
         except Exception as e:  # one broken source must not stop the others
             import traceback
             traceback.print_exc()
