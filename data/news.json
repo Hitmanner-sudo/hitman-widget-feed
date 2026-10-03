@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-03T21:36:01.968459+00:00",
-  "count": 1,
+  "generated": "2026-10-03T21:38:58.562055+00:00",
+  "count": 10,
   "items": [
     {
       "game": "HITMAN",
@@ -8,6 +8,69 @@
       "title": "Game Update | 3.280",
       "image": "https://cms.ioi.dk/media/nkjnrdf1/game_update_1920x1080.jpg?width=2560",
       "url": "https://ioi.dk/hitman/patch-notes/2026/game-update-3-280"
+    },
+    {
+      "game": "HITMAN",
+      "type": "Roadmap",
+      "title": "HITMAN - Season of The Herbalist",
+      "image": "https://cms.ioi.dk/media/ftfjhiwi/hwoa_season_of_the_herbalist_roadmap_w-legals.jpg?width=1200",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist"
+    },
+    {
+      "game": "HITMAN",
+      "type": "News",
+      "title": "Snoop Dogg joins the World of Assassination",
+      "image": "https://cms.ioi.dk/media/ifmljm4f/herbalist_screenshot.jpg?width=2560",
+      "url": "https://ioi.dk/hitman/news/2026/snoop-dogg-joins-the-world-of-assassination"
+    },
+    {
+      "game": "HITMAN",
+      "type": "Patch Notes",
+      "title": "Game Update | 3.270.1",
+      "image": "https://cms.ioi.dk/media/nkjnrdf1/game_update_1920x1080.jpg?width=2560",
+      "url": "https://ioi.dk/hitman/patch-notes/2026/game-update-3-270-1"
+    },
+    {
+      "game": "HITMAN",
+      "type": "Patch Notes",
+      "title": "Game Update | 3.270",
+      "image": "https://cms.ioi.dk/media/nkjnrdf1/game_update_1920x1080.jpg?width=2560",
+      "url": "https://ioi.dk/hitman/patch-notes/2026/game-update-3-270"
+    },
+    {
+      "game": "HITMAN",
+      "type": "Roadmap",
+      "title": "HITMAN - Season of The Wizard",
+      "image": "https://cms.ioi.dk/media/tzahbs2t/hwoa_season_of_the_the-wizard_roadmap-legals_clean-web.jpg?width=1200",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-wizard"
+    },
+    {
+      "game": "HITMAN",
+      "type": "News",
+      "title": "Wiz Khalifa Available Now for Free in HITMAN World of Assassination",
+      "image": "https://cms.ioi.dk/media/fsfbdsm5/woa_wizkhalifa_1-1_2160x2160_web.jpg?width=1200",
+      "url": "https://ioi.dk/hitman/news/2026/wiz-khalifa-available-now"
+    },
+    {
+      "game": "HITMAN",
+      "type": "News",
+      "title": "Rewards in HITMAN & 007 First Light",
+      "image": "https://cms.ioi.dk/media/xoffnkru/fl-hm_cross-promo.jpg?width=1200",
+      "url": "https://ioi.dk/hitman/news/2026/rewards-in-hitman-007-first-light"
+    },
+    {
+      "game": "HITMAN",
+      "type": "Roadmap",
+      "title": "HITMAN - Season of the Royal Ace",
+      "image": "https://cms.ioi.dk/media/uqiawo00/hwoa_season_of_the_royal_ace_roadmap-legals_clean.jpg?width=1200",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-royal-ace"
+    },
+    {
+      "game": "HITMAN",
+      "type": "News",
+      "title": "HITMAN: The Board Game is launching April 30th!",
+      "image": "https://cms.ioi.dk/media/1cfae3oe/hit_1920x1080_web.jpg?width=1200",
+      "url": "https://ioi.dk/hitman/news/2026/hitman-the-board-game-launch"
     }
   ]
 }
