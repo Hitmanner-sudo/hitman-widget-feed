@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T13:25:19.485672+00:00",
+  "generated": "2026-10-04T17:07:57.287905+00:00",
   "count": 6,
   "roadmaps": [
     {
@@ -37,7 +37,8 @@
       "end": "2026-10-25",
       "image": "https://cms.ioi.dk/media/f4mpoewo/website_blogpost_1920_02.jpg?width=2560",
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist",
-      "source": "hitmaps"
+      "source": "hitmaps",
+      "hitmaps_url": "https://www.hitmaps.com/games/hitman2/miami/finish-line"
     },
     {
       "title": "The Ascensionist",
@@ -47,7 +48,8 @@
       "end": "2026-10-11",
       "image": "https://cms.ioi.dk/media/nn5gh1jj/website_blogpost_1920_05.jpg?width=2560",
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist",
-      "source": "hitmaps"
+      "source": "hitmaps",
+      "hitmaps_url": "https://www.hitmaps.com/games/hitman3/dubai/on-top-of-the-world"
     },
     {
       "title": "The Purple Streak Crowbar",
@@ -66,7 +68,8 @@
       "end": "2026-10-18",
       "image": "https://cms.ioi.dk/media/oapjuhtl/website_blogpost_1920_06.jpg?width=2560",
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist",
-      "source": "hitmaps"
+      "source": "hitmaps",
+      "hitmaps_url": "https://www.hitmaps.com/games/hitman/hokkaido/situs-inversus"
     },
     {
       "title": "The Bad Boy",
@@ -76,7 +79,8 @@
       "end": "2026-10-25",
       "image": "https://cms.ioi.dk/media/xaefkxnc/website_blogpost_1920_07.jpg?width=2560",
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist",
-      "source": "hitmaps"
+      "source": "hitmaps",
+      "hitmaps_url": "https://www.hitmaps.com/games/hitman/sapienza/the-icon"
     }
   ]
 }
