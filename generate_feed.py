@@ -421,6 +421,21 @@ def cross_reference(events, et, drops):
                                "kind": "Elusive Target", "section": "Elusive Targets",
                                "start": b.isoformat(), "end": en.isoformat() if en else None,
                                "image": e.get("image", ""), "url": e.get("url", ""), "source": "hitmaps"})
+    today = datetime.now(timezone.utc).date()
+    # Things the roadmap says are running that the live feeds say are over: drop them.
+    et_ok = bool(et) and not et.get("error")
+    if et_ok:
+        live_names = {_norm_name(e.get("name", "")) for e in (et.get("ongoing") or [])}
+        events[:] = [ev for ev in events
+                     if not (ev["kind"] == "Elusive Target" and ev.get("source") != "hitmaps"
+                             and ev["start"] <= today.isoformat() <= (ev["end"] or ev["start"])
+                             and _norm_name(ev["title"]) not in live_names)]
+    hit = next((i for i in (drops or {}).get("items") or [] if "hitman" in (i.get("slug") or "")), None)
+    if hit is not None and not hit.get("error"):
+        active = {_norm_name(rw.get("name", "")) for c in hit.get("campaigns") or [] for rw in c.get("rewards") or []}
+        events[:] = [ev for ev in events
+                     if not (ev["kind"] == "Twitch Drop" and ev["start"] <= today.isoformat()
+                             and _norm_name(ev["title"]) not in active)]
     if drops:
         for item in drops.get("items") or []:
             if "hitman" not in (item.get("slug") or ""):
