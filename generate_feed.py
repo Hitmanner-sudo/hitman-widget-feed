@@ -431,26 +431,30 @@ def cross_reference(events, et, drops):
                              and ev["start"] <= today.isoformat() <= (ev["end"] or ev["start"])
                              and _norm_name(ev["title"]) not in live_names)]
     hit = next((i for i in (drops or {}).get("items") or [] if "hitman" in (i.get("slug") or "")), None)
-    if hit is not None and not hit.get("error"):
-        active = {_norm_name(rw.get("name", "")) for c in hit.get("campaigns") or [] for rw in c.get("rewards") or []}
-        events[:] = [ev for ev in events
-                     if not (ev["kind"] == "Twitch Drop" and ev["start"] <= today.isoformat()
-                             and _norm_name(ev["title"]) not in active)]
-    if drops:
-        for item in drops.get("items") or []:
-            if "hitman" not in (item.get("slug") or ""):
-                continue
-            for camp in item.get("campaigns") or []:
-                end = _day(camp.get("end_iso"))
-                for rw in camp.get("rewards") or []:
-                    key = _norm_name(rw.get("name", ""))
-                    for ev in events:
-                        if ev["kind"] == "Twitch Drop" and _norm_name(ev["title"]) == key:
-                            if end:
-                                ev["end"] = end.isoformat()
-                            ev["source"] = "twitchdrops"
-                            if not ev.get("image") and rw.get("image"):
-                                ev["image"] = rw["image"]
+    if hit is not None and hit.get("page_ok") and not hit.get("error"):
+        camps = hit.get("campaigns") or []
+        ends = {_day(c.get("end_iso")) for c in camps if _day(c.get("end_iso"))}
+        solo_end = next(iter(ends)) if len(ends) == 1 else None
+        pairs = []
+        for c in camps:
+            for rw in c.get("rewards") or []:
+                pairs.append((rw, _day(c.get("end_iso"))))
+        for rw in hit.get("active_rewards") or []:
+            pairs.append((rw, solo_end))
+        active = {_norm_name(rw.get("name", "")) for rw, _ in pairs}
+        if active or not camps:  # page read fine: either we know the active rewards or nothing is running
+            events[:] = [ev for ev in events
+                         if not (ev["kind"] == "Twitch Drop" and ev["start"] <= today.isoformat()
+                                 and _norm_name(ev["title"]) not in active)]
+        for rw, end in pairs:
+            key = _norm_name(rw.get("name", ""))
+            for ev in events:
+                if ev["kind"] == "Twitch Drop" and _norm_name(ev["title"]) == key:
+                    if end:
+                        ev["end"] = end.isoformat()
+                    ev["source"] = "twitchdrops"
+                    if not ev.get("image") and rw.get("image"):
+                        ev["image"] = rw["image"]
     return events
 
 
@@ -578,6 +582,40 @@ def parse_active_rewards(html: str, active_campaign_names: list) -> dict:
     return rewards_by_campaign
 
 
+def _attr(tag: str, name: str) -> str:
+    m = re.search(rf'\b{name}=["\']([^"\']*)["\']', tag, re.IGNORECASE)
+    return m.group(1) if m else ""
+
+
+def scrape_active_rewards(page: str) -> list:
+    """Reward images before the 'Past Drops' heading (same approach the app uses on the page)."""
+    cut = page.find("Past Drops")
+    if cut < 0:
+        cut = page.find("Past Campaigns")
+    if cut < 0:
+        cut = len(page)
+    head = page[:cut]
+    out, seen = [], set()
+    for m in re.finditer(r"<img[^>]*>", head, re.IGNORECASE):
+        tag = m.group(0)
+        if "/REWARD/" not in tag:
+            continue
+        src = _attr(tag, "src")
+        if "/REWARD/" not in src:
+            src = _attr(tag, "data-src")
+        if not src or src in seen:
+            continue
+        seen.add(src)
+        name = htmllib.unescape(_attr(tag, "alt")).strip()
+        if not name:
+            continue
+        after = re.sub(r"<[^>]*>", " ", head[m.end():m.end() + 400])
+        rm = re.search(r"(?i)watch\s+(\d+\s*(?:h|hr|hrs|hour|hours|m|min|mins|minutes)\b)", after)
+        out.append({"name": name, "image": src,
+                    "requirement": ("Watch " + rm.group(1).replace(" ", "")) if rm else ""})
+    return out
+
+
 def parse_drops_page(html: str, slug: str, label: str, account_link_url: str) -> dict:
     m = re.search(r'<meta\s+(?:property|name)="og:image"\s+content="([^"]+)"', html)
     if not m:
@@ -624,6 +662,8 @@ def parse_drops_page(html: str, slug: str, label: str, account_link_url: str) ->
         "end_human": end_human,
         "campaign_count": len(active_campaigns),
         "total_reward_count": total_rewards,
+        "page_ok": True,
+        "active_rewards": scrape_active_rewards(html),
         "campaigns": active_campaigns,
         "url": f"https://twitchdrops.app/game/{slug}",
     }
