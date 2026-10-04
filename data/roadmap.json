@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-04T07:30:40.341449+00:00",
-  "count": 7,
+  "generated": "2026-10-04T07:53:06.570219+00:00",
+  "count": 5,
   "roadmaps": [
     {
       "title": "HITMAN - Season of The Herbalist",
@@ -19,24 +19,6 @@
     }
   ],
   "events": [
-    {
-      "title": "The Purple Streak Baseball Bat",
-      "kind": "Twitch Drop",
-      "section": "Twitch Drops",
-      "start": "2026-09-09",
-      "end": "2026-10-22",
-      "image": "https://cms.ioi.dk/media/roljjhiu/website_blogpost_1920_16.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist"
-    },
-    {
-      "title": "The Green Grapes",
-      "kind": "Twitch Drop",
-      "section": "Twitch Drops",
-      "start": "2026-09-25",
-      "end": "2026-10-08",
-      "image": "https://cms.ioi.dk/media/u11dqajf/website_blogpost_1920_17.jpg?width=2560",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist"
-    },
     {
       "title": "The Undying Returns",
       "kind": "Elusive Target",
