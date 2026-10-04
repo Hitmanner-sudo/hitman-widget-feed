@@ -412,12 +412,13 @@ def cross_reference(events, et, drops):
                     hit = ev
                     break
             if hit:
-                hit.update(start=b.isoformat(), end=en.isoformat() if en else hit["end"],
+                hit.update(title=(e.get("name") or hit["title"]).strip(),  # same name the Elusive Target widget shows
+                           start=b.isoformat(), end=en.isoformat() if en else hit["end"],
                            kind="Elusive Target", source="hitmaps", hitmaps_url=e.get("url", ""))
                 if not hit.get("image") and e.get("image"):
                     hit["image"] = e["image"]
             else:
-                events.append({"title": re.sub(r"(\s*(\([^)]*\)|#\d+|[-\u2013\u2014]\s*Year\s*\d+))+\s*$", "", e.get("name", "")).strip() or "Elusive Target",
+                events.append({"title": (e.get("name") or "").strip() or "Elusive Target",
                                "kind": "Elusive Target", "section": "Elusive Targets",
                                "start": b.isoformat(), "end": en.isoformat() if en else None,
                                "image": e.get("image", ""), "url": e.get("url", ""), "hitmaps_url": e.get("url", ""),
