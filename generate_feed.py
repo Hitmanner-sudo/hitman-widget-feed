@@ -413,14 +413,15 @@ def cross_reference(events, et, drops):
                     break
             if hit:
                 hit.update(start=b.isoformat(), end=en.isoformat() if en else hit["end"],
-                           kind="Elusive Target", source="hitmaps")
+                           kind="Elusive Target", source="hitmaps", hitmaps_url=e.get("url", ""))
                 if not hit.get("image") and e.get("image"):
                     hit["image"] = e["image"]
             else:
                 events.append({"title": re.sub(r"(\s*(\([^)]*\)|#\d+|[-\u2013\u2014]\s*Year\s*\d+))+\s*$", "", e.get("name", "")).strip() or "Elusive Target",
                                "kind": "Elusive Target", "section": "Elusive Targets",
                                "start": b.isoformat(), "end": en.isoformat() if en else None,
-                               "image": e.get("image", ""), "url": e.get("url", ""), "source": "hitmaps"})
+                               "image": e.get("image", ""), "url": e.get("url", ""), "hitmaps_url": e.get("url", ""),
+                               "source": "hitmaps"})
     today = datetime.now(timezone.utc).date()
     # Things the roadmap says are running that the live feeds say are over: drop them.
     et_ok = bool(et) and not et.get("error")
