@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T17:07:57.287905+00:00",
+  "generated": "2026-10-04T17:13:11.831868+00:00",
   "count": 6,
   "roadmaps": [
     {
@@ -30,7 +30,7 @@
       "source": "twitchdrops"
     },
     {
-      "title": "The Undying Returns",
+      "title": "The Undying Returns (2026)",
       "kind": "Elusive Target",
       "section": "Premium Content",
       "start": "2026-09-28",
@@ -41,7 +41,7 @@
       "hitmaps_url": "https://www.hitmaps.com/games/hitman2/miami/finish-line"
     },
     {
-      "title": "The Ascensionist",
+      "title": "The Ascensionist - Year 6",
       "kind": "Elusive Target",
       "section": "Returning Elusive Targets",
       "start": "2026-10-02",
@@ -61,7 +61,7 @@
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist"
     },
     {
-      "title": "The Surgeons",
+      "title": "The Surgeons - Year 6",
       "kind": "Elusive Target",
       "section": "Returning Elusive Targets",
       "start": "2026-10-09",
@@ -72,7 +72,7 @@
       "hitmaps_url": "https://www.hitmaps.com/games/hitman/hokkaido/situs-inversus"
     },
     {
-      "title": "The Bad Boy",
+      "title": "The Badboy - Year 6",
       "kind": "Elusive Target",
       "section": "Returning Elusive Targets",
       "start": "2026-10-16",
