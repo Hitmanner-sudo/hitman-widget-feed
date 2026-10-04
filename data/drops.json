@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T07:53:04.450486+00:00",
+  "generated": "2026-10-04T08:18:45.350912+00:00",
   "items": [
     {
       "game": "HITMAN World of Assassination",
@@ -10,6 +10,14 @@
       "end_human": "Oct 8",
       "campaign_count": 1,
       "total_reward_count": 0,
+      "page_ok": true,
+      "active_rewards": [
+        {
+          "name": "Green Grapes",
+          "image": "https://static-cdn.jtvnw.net/twitch-quests-assets/REWARD/245df05f-f9f9-4746-a72d-23ed8186e55f.jpeg",
+          "requirement": "Watch 1h"
+        }
+      ],
       "campaigns": [
         {
           "name": "The Herbalist #3",
@@ -33,6 +41,14 @@
       "end_human": "Oct 16",
       "campaign_count": 1,
       "total_reward_count": 0,
+      "page_ok": true,
+      "active_rewards": [
+        {
+          "name": "One More",
+          "image": "https://static-cdn.jtvnw.net/twitch-quests-assets/REWARD/ce30d2b4-81f4-49c7-bbfb-d23a79f61c15.jpeg",
+          "requirement": "Watch 1h"
+        }
+      ],
       "campaigns": [
         {
           "name": "Extended Operations",
