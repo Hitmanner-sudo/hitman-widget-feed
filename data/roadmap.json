@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-07T02:16:20.165727+00:00",
+  "generated": "2026-10-07T08:51:56.268331+00:00",
   "count": 6,
   "roadmaps": [
     {
@@ -25,7 +25,7 @@
       "section": "Twitch Drops",
       "start": "2026-09-25",
       "end": "2026-10-08",
-      "image": "https://cms.ioi.dk/media/u11dqajf/website_blogpost_1920_17.jpg?width=2560",
+      "image": "https://cms.ioi.dk/media/u11dqajf/website_blogpost_1920_17.jpg?quality=78&hmac=df329705c7916b7eac2c75eb3f925b9aa54b4a4d7bb00475a4eec53dc99820b7",
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist",
       "source": "twitchdrops"
     },
@@ -35,7 +35,7 @@
       "section": "Premium Content",
       "start": "2026-09-28",
       "end": "2026-10-25",
-      "image": "https://cms.ioi.dk/media/f4mpoewo/website_blogpost_1920_02.jpg?width=2560",
+      "image": "https://cms.ioi.dk/media/f4mpoewo/website_blogpost_1920_02.jpg?quality=78&hmac=4a5b972028c220c44e830161f8799c6fc503cb825f80902bb120d5732fbfe99b",
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist",
       "source": "hitmaps",
       "hitmaps_url": "https://www.hitmaps.com/games/hitman2/miami/finish-line"
@@ -46,7 +46,7 @@
       "section": "Returning Elusive Targets",
       "start": "2026-10-02",
       "end": "2026-10-11",
-      "image": "https://cms.ioi.dk/media/nn5gh1jj/website_blogpost_1920_05.jpg?width=2560",
+      "image": "https://cms.ioi.dk/media/nn5gh1jj/website_blogpost_1920_05.jpg?quality=78&hmac=5ecbb577f7da03d9aedcd6d060e4faa029187ac093dc6466ad9e819d71967e6e",
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist",
       "source": "hitmaps",
       "hitmaps_url": "https://www.hitmaps.com/games/hitman3/dubai/on-top-of-the-world"
@@ -57,7 +57,7 @@
       "section": "Twitch Drops",
       "start": "2026-10-09",
       "end": "2026-10-23",
-      "image": "https://cms.ioi.dk/media/c24ei3ae/website_blogpost_1920_18.jpg?width=2560",
+      "image": "https://cms.ioi.dk/media/c24ei3ae/website_blogpost_1920_18.jpg?quality=78&hmac=9ad08fa7679377683223d28905331af22198f1c84eae3e29777018d018af8613",
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist"
     },
     {
@@ -66,7 +66,7 @@
       "section": "Returning Elusive Targets",
       "start": "2026-10-09",
       "end": "2026-10-18",
-      "image": "https://cms.ioi.dk/media/oapjuhtl/website_blogpost_1920_06.jpg?width=2560",
+      "image": "https://cms.ioi.dk/media/oapjuhtl/website_blogpost_1920_06.jpg?quality=78&hmac=a7fbd63075bdb5e76c30556fed1c13bec58a8720483dc310779ef145390d1256",
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist",
       "source": "hitmaps",
       "hitmaps_url": "https://www.hitmaps.com/games/hitman/hokkaido/situs-inversus"
@@ -77,7 +77,7 @@
       "section": "Returning Elusive Targets",
       "start": "2026-10-16",
       "end": "2026-10-25",
-      "image": "https://cms.ioi.dk/media/xaefkxnc/website_blogpost_1920_07.jpg?width=2560",
+      "image": "https://cms.ioi.dk/media/xaefkxnc/website_blogpost_1920_07.jpg?quality=78&hmac=0f9a2016aee0f729f03a494bf7644a3988bff54219480a0323acaade26eefe91",
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist",
       "source": "hitmaps",
       "hitmaps_url": "https://www.hitmaps.com/games/hitman/sapienza/the-icon"
