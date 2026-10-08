@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-08T07:16:59.686571+00:00",
-  "count": 6,
+  "generated": "2026-10-08T14:41:18.287661+00:00",
+  "count": 5,
   "roadmaps": [
     {
       "title": "HITMAN - Season of The Herbalist",
@@ -19,16 +19,6 @@
     }
   ],
   "events": [
-    {
-      "title": "The Green Grapes",
-      "kind": "Twitch Drop",
-      "section": "Twitch Drops",
-      "start": "2026-09-25",
-      "end": "2026-10-08",
-      "image": "https://cms.ioi.dk/media/u11dqajf/website_blogpost_1920_17.jpg?quality=78&hmac=df329705c7916b7eac2c75eb3f925b9aa54b4a4d7bb00475a4eec53dc99820b7",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist",
-      "source": "twitchdrops"
-    },
     {
       "title": "The Undying Returns (2026)",
       "kind": "Elusive Target",
@@ -58,7 +48,8 @@
       "start": "2026-10-09",
       "end": "2026-10-23",
       "image": "https://cms.ioi.dk/media/c24ei3ae/website_blogpost_1920_18.jpg?quality=78&hmac=9ad08fa7679377683223d28905331af22198f1c84eae3e29777018d018af8613",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist"
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist",
+      "source": "twitchdrops"
     },
     {
       "title": "The Surgeons - Year 6",
