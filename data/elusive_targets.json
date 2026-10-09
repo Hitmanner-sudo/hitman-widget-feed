@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-09T06:31:54.307390+00:00",
-  "ongoing_count": 2,
-  "incoming_count": 2,
+  "generated": "2026-10-09T13:41:44.441132+00:00",
+  "ongoing_count": 3,
+  "incoming_count": 1,
   "ongoing": [
     {
       "name": "The Ascensionist - Year 6",
@@ -9,6 +9,13 @@
       "end": "2026-10-11T12:00:00Z",
       "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman3/the-ascensionist.jpg",
       "url": "https://www.hitmaps.com/games/hitman3/dubai/on-top-of-the-world"
+    },
+    {
+      "name": "The Surgeons - Year 6",
+      "begin": "2026-10-09T12:00:00Z",
+      "end": "2026-10-18T12:00:00Z",
+      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman/the-surgeons.jpg",
+      "url": "https://www.hitmaps.com/games/hitman/hokkaido/situs-inversus"
     },
     {
       "name": "The Undying Returns (2026)",
@@ -19,13 +26,6 @@
     }
   ],
   "incoming": [
-    {
-      "name": "The Surgeons - Year 6",
-      "begin": "2026-10-09T12:00:00Z",
-      "end": "2026-10-18T12:00:00Z",
-      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman/the-surgeons.jpg",
-      "url": "https://www.hitmaps.com/games/hitman/hokkaido/situs-inversus"
-    },
     {
       "name": "The Badboy - Year 6",
       "begin": "2026-10-16T12:00:00Z",
