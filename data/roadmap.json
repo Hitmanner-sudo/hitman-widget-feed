@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-11T22:34:33.762180+00:00",
-  "count": 4,
+  "generated": "2026-10-12T01:45:05.944081+00:00",
+  "count": 5,
   "roadmaps": [
     {
       "title": "HITMAN - Season of The Herbalist",
@@ -29,6 +29,15 @@
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist",
       "source": "hitmaps",
       "hitmaps_url": "https://www.hitmaps.com/games/hitman2/miami/finish-line"
+    },
+    {
+      "title": "The Ascensionist",
+      "kind": "Elusive Target",
+      "section": "Returning Elusive Targets",
+      "start": "2026-10-02",
+      "end": "2026-10-11",
+      "image": "https://cms.ioi.dk/media/nn5gh1jj/website_blogpost_1920_05.jpg?quality=78&hmac=5ecbb577f7da03d9aedcd6d060e4faa029187ac093dc6466ad9e819d71967e6e",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist"
     },
     {
       "title": "The Purple Streak Crowbar",
