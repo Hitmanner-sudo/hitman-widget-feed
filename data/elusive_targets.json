@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-16T07:30:52.177451+00:00",
-  "ongoing_count": 2,
-  "incoming_count": 1,
+  "generated": "2026-10-16T12:41:33.527507+00:00",
+  "ongoing_count": 3,
+  "incoming_count": 0,
   "ongoing": [
     {
       "name": "The Surgeons - Year 6",
@@ -11,6 +11,13 @@
       "url": "https://www.hitmaps.com/games/hitman/hokkaido/situs-inversus"
     },
     {
+      "name": "The Badboy - Year 6",
+      "begin": "2026-10-16T12:00:00Z",
+      "end": "2026-10-25T12:00:00Z",
+      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman/the-badboy.jpg",
+      "url": "https://www.hitmaps.com/games/hitman/sapienza/the-icon"
+    },
+    {
       "name": "The Undying Returns (2026)",
       "begin": "2026-09-28T12:00:00Z",
       "end": "2026-10-25T12:00:01Z",
@@ -18,14 +25,6 @@
       "url": "https://www.hitmaps.com/games/hitman2/miami/finish-line"
     }
   ],
-  "incoming": [
-    {
-      "name": "The Badboy - Year 6",
-      "begin": "2026-10-16T12:00:00Z",
-      "end": "2026-10-25T12:00:00Z",
-      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman/the-badboy.jpg",
-      "url": "https://www.hitmaps.com/games/hitman/sapienza/the-icon"
-    }
-  ],
+  "incoming": [],
   "attribution": "Data via HITMAPS (hitmaps.com)"
 }
