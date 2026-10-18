@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-18T09:50:21.772406+00:00",
-  "count": 4,
+  "generated": "2026-10-18T13:39:57.431681+00:00",
+  "count": 3,
   "roadmaps": [
     {
       "title": "HITMAN - Season of The Herbalist",
@@ -39,17 +39,6 @@
       "image": "https://cms.ioi.dk/media/c24ei3ae/website_blogpost_1920_18.jpg?quality=78&hmac=9ad08fa7679377683223d28905331af22198f1c84eae3e29777018d018af8613",
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist",
       "source": "twitchdrops"
-    },
-    {
-      "title": "The Surgeons - Year 6",
-      "kind": "Elusive Target",
-      "section": "Returning Elusive Targets",
-      "start": "2026-10-09",
-      "end": "2026-10-18",
-      "image": "https://cms.ioi.dk/media/oapjuhtl/website_blogpost_1920_06.jpg?quality=78&hmac=a7fbd63075bdb5e76c30556fed1c13bec58a8720483dc310779ef145390d1256",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist",
-      "source": "hitmaps",
-      "hitmaps_url": "https://www.hitmaps.com/games/hitman/hokkaido/situs-inversus"
     },
     {
       "title": "The Badboy - Year 6",
