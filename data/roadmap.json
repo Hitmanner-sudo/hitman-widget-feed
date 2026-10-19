@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-19T20:10:03.602063+00:00",
+  "generated": "2026-10-19T23:43:58.454473+00:00",
   "count": 3,
   "roadmaps": [
     {
@@ -20,15 +20,13 @@
   ],
   "events": [
     {
-      "title": "The Undying Returns (2026)",
-      "kind": "Elusive Target",
+      "title": "The Undying Returns",
+      "kind": "Premium",
       "section": "Premium Content",
-      "start": "2026-09-28",
+      "start": "2026-09-25",
       "end": "2026-10-25",
       "image": "https://cms.ioi.dk/media/f4mpoewo/website_blogpost_1920_02.jpg?quality=78&hmac=4a5b972028c220c44e830161f8799c6fc503cb825f80902bb120d5732fbfe99b",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist",
-      "source": "hitmaps",
-      "hitmaps_url": "https://www.hitmaps.com/games/hitman2/miami/finish-line"
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist"
     },
     {
       "title": "The Purple Streak Crowbar",
@@ -41,15 +39,13 @@
       "source": "twitchdrops"
     },
     {
-      "title": "The Badboy - Year 6",
+      "title": "The Bad Boy",
       "kind": "Elusive Target",
       "section": "Returning Elusive Targets",
       "start": "2026-10-16",
       "end": "2026-10-25",
       "image": "https://cms.ioi.dk/media/xaefkxnc/website_blogpost_1920_07.jpg?quality=78&hmac=0f9a2016aee0f729f03a494bf7644a3988bff54219480a0323acaade26eefe91",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist",
-      "source": "hitmaps",
-      "hitmaps_url": "https://www.hitmaps.com/games/hitman/sapienza/the-icon"
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist"
     }
   ]
 }
