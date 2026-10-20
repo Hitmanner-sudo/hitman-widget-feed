@@ -1,23 +1,6 @@
 {
-  "generated": "2026-10-20T17:53:20.339197+00:00",
-  "ongoing_count": 2,
-  "incoming_count": 0,
-  "ongoing": [
-    {
-      "name": "The Badboy - Year 6",
-      "begin": "2026-10-16T12:00:00Z",
-      "end": "2026-10-25T12:00:00Z",
-      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman/the-badboy.jpg",
-      "url": "https://www.hitmaps.com/games/hitman/sapienza/the-icon"
-    },
-    {
-      "name": "The Undying Returns (2026)",
-      "begin": "2026-09-28T12:00:00Z",
-      "end": "2026-10-25T12:00:01Z",
-      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman2/the-undying-returns-2024-2.jpg",
-      "url": "https://www.hitmaps.com/games/hitman2/miami/finish-line"
-    }
-  ],
+  "generated": "2026-10-20T21:16:00.147313+00:00",
+  "ongoing": [],
   "incoming": [],
-  "attribution": "Data via HITMAPS (hitmaps.com)"
+  "error": "HTTP Error 522: <none>"
 }
