@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-23T11:16:40.325139+00:00",
-  "count": 3,
+  "generated": "2026-10-23T15:46:42.439052+00:00",
+  "count": 2,
   "roadmaps": [
     {
       "title": "HITMAN - Season of The Herbalist",
@@ -29,16 +29,6 @@
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist",
       "source": "hitmaps",
       "hitmaps_url": "https://www.hitmaps.com/games/hitman2/miami/finish-line"
-    },
-    {
-      "title": "The Purple Streak Crowbar",
-      "kind": "Twitch Drop",
-      "section": "Twitch Drops",
-      "start": "2026-10-09",
-      "end": "2026-10-23",
-      "image": "https://cms.ioi.dk/media/c24ei3ae/website_blogpost_1920_18.jpg?quality=78&hmac=9ad08fa7679377683223d28905331af22198f1c84eae3e29777018d018af8613",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist",
-      "source": "twitchdrops"
     },
     {
       "title": "The Badboy - Year 6",
