@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-26T21:32:08.269286+00:00",
-  "count": 2,
+  "generated": "2026-10-27T00:45:57.136259+00:00",
+  "count": 1,
   "roadmaps": [
     {
       "title": "HITMAN - Season of The Herbalist",
@@ -29,15 +29,6 @@
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist",
       "source": "hitmaps",
       "hitmaps_url": "https://www.hitmaps.com/games/hitman2/miami/finish-line"
-    },
-    {
-      "title": "The Bad Boy",
-      "kind": "Elusive Target",
-      "section": "Returning Elusive Targets",
-      "start": "2026-10-16",
-      "end": "2026-10-25",
-      "image": "https://cms.ioi.dk/media/xaefkxnc/website_blogpost_1920_07.jpg?quality=78&hmac=0f9a2016aee0f729f03a494bf7644a3988bff54219480a0323acaade26eefe91",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist"
     }
   ]
 }
