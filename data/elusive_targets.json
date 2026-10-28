@@ -1,16 +1,8 @@
 {
-  "generated": "2026-10-27T20:55:30.323769+00:00",
-  "ongoing_count": 1,
+  "generated": "2026-10-28T00:19:57.314247+00:00",
+  "ongoing_count": 0,
   "incoming_count": 0,
-  "ongoing": [
-    {
-      "name": "The Undying Returns (2026)",
-      "begin": "2026-09-28T12:00:00Z",
-      "end": "2026-10-29T12:00:00Z",
-      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman2/the-undying-returns-2024-2.jpg",
-      "url": "https://www.hitmaps.com/games/hitman2/miami/finish-line"
-    }
-  ],
+  "ongoing": [],
   "incoming": [],
   "attribution": "Data via HITMAPS (hitmaps.com)"
 }

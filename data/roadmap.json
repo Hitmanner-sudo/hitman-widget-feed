@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-27T20:55:35.999136+00:00",
-  "count": 1,
+  "generated": "2026-10-28T00:20:02.967934+00:00",
+  "count": 0,
   "roadmaps": [
     {
       "title": "HITMAN - Season of The Herbalist",
@@ -18,17 +18,5 @@
       "events": 8
     }
   ],
-  "events": [
-    {
-      "title": "The Undying Returns (2026)",
-      "kind": "Elusive Target",
-      "section": "Premium Content",
-      "start": "2026-09-28",
-      "end": "2026-10-29",
-      "image": "https://cms.ioi.dk/media/f4mpoewo/website_blogpost_1920_02.jpg?quality=78&hmac=4a5b972028c220c44e830161f8799c6fc503cb825f80902bb120d5732fbfe99b",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist",
-      "source": "hitmaps",
-      "hitmaps_url": "https://www.hitmaps.com/games/hitman2/miami/finish-line"
-    }
-  ]
+  "events": []
 }
