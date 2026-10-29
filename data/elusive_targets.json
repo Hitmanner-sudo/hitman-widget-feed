@@ -1,8 +1,38 @@
 {
-  "generated": "2026-10-29T08:20:30.674220+00:00",
-  "ongoing_count": 0,
-  "incoming_count": 0,
-  "ongoing": [],
-  "incoming": [],
+  "generated": "2026-10-29T15:20:17.279157+00:00",
+  "ongoing_count": 1,
+  "incoming_count": 3,
+  "ongoing": [
+    {
+      "name": "The Host",
+      "begin": "2026-10-29T12:00:00Z",
+      "end": "2026-11-25T12:00:00Z",
+      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman2/the-host.jpg",
+      "url": "https://www.hitmaps.com/games/hitman2/hawkes-bay/nightcall"
+    }
+  ],
+  "incoming": [
+    {
+      "name": "The Pharmacist - Year 6",
+      "begin": "2026-10-30T12:00:00Z",
+      "end": "2026-11-08T12:00:00Z",
+      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman/the-pharmacist.jpg",
+      "url": "https://www.hitmaps.com/games/hitman/paris/the-showstopper"
+    },
+    {
+      "name": "The Warlord - Year 6",
+      "begin": "2026-11-06T12:00:00Z",
+      "end": "2026-11-15T12:00:00Z",
+      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman/the-warlord.jpg",
+      "url": "https://www.hitmaps.com/games/hitman/bangkok/club-27"
+    },
+    {
+      "name": "The Entertainer - Year 6",
+      "begin": "2026-11-13T12:00:00Z",
+      "end": "2026-11-22T12:00:00Z",
+      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman/the-entertainer.jpg",
+      "url": "https://www.hitmaps.com/games/hitman/marrakesh/a-house-built-on-sand"
+    }
+  ],
   "attribution": "Data via HITMAPS (hitmaps.com)"
 }

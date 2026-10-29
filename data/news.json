@@ -1,7 +1,28 @@
 {
-  "generated": "2026-10-29T08:20:36.880819+00:00",
+  "generated": "2026-10-29T15:20:20.585732+00:00",
   "count": 10,
   "items": [
+    {
+      "game": "HITMAN",
+      "type": "Patch Notes",
+      "title": "Game Update | 3.290",
+      "image": "https://cms.ioi.dk/media/nkjnrdf1/game_update_1920x1080.jpg?quality=78&hmac=2c20b75e95781e4c3b45f887e79eff1b7a47cd613de498f81ae6896ceeb079a1",
+      "url": "https://ioi.dk/hitman/patch-notes/2026/game-update-3-290"
+    },
+    {
+      "game": "HITMAN",
+      "type": "Roadmap",
+      "title": "HITMAN - Season of The Host",
+      "image": "https://cms.ioi.dk/media/2guluarq/hwoa_season_of_the_host_roadmap_w-legals_1280x720.jpg?width=1200&quality=78&hmac=4c3ecb8d1be0e076241f9c0913cf5ef6dbf79a9b4241360a38ca0cc88a9ee35f",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host"
+    },
+    {
+      "game": "HITMAN",
+      "type": "News",
+      "title": "Jacksepticeye joins HITMAN WOA as The Host",
+      "image": "https://cms.ioi.dk/media/tb2f2tlq/05_alt_card.jpg?quality=78&hmac=96b2ea5739993848b6564118ded475c2780142b4a70d67a755d8d257b3511bd9",
+      "url": "https://ioi.dk/hitman/news/2026/jacksepticeye-joins-hitman-woa-as-the-host"
+    },
     {
       "game": "HITMAN",
       "type": "Patch Notes",
@@ -50,27 +71,6 @@
       "title": "Wiz Khalifa Available Now for Free in HITMAN World of Assassination",
       "image": "https://cms.ioi.dk/media/fsfbdsm5/woa_wizkhalifa_1-1_2160x2160_web.jpg?width=1200&quality=78&hmac=44620d4d509897383f5d90a4af5dd00b6eb517165bc26d5af9352e70d96fa993",
       "url": "https://ioi.dk/hitman/news/2026/wiz-khalifa-available-now"
-    },
-    {
-      "game": "HITMAN",
-      "type": "News",
-      "title": "Rewards in HITMAN & 007 First Light",
-      "image": "https://cms.ioi.dk/media/xoffnkru/fl-hm_cross-promo.jpg?width=1200&quality=78&hmac=0cc73fcf0fec0f2e6d24f91879d860edddd13d16c4ff45859edc1665d3da1e6c",
-      "url": "https://ioi.dk/hitman/news/2026/rewards-in-hitman-007-first-light"
-    },
-    {
-      "game": "HITMAN",
-      "type": "Roadmap",
-      "title": "HITMAN - Season of the Royal Ace",
-      "image": "https://cms.ioi.dk/media/uqiawo00/hwoa_season_of_the_royal_ace_roadmap-legals_clean.jpg?width=1200&quality=78&hmac=a82d7c2342b863b1e14f212839575e3c815da3441c55a8e8b45cfe5c3e90468e",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-royal-ace"
-    },
-    {
-      "game": "HITMAN",
-      "type": "News",
-      "title": "HITMAN: The Board Game is launching April 30th!",
-      "image": "https://cms.ioi.dk/media/1cfae3oe/hit_1920x1080_web.jpg?width=1200&quality=78&hmac=a23b07b64a553175274f88c8ca92f58c2a4883cf90e6ab9aacff27c4304e5cc9",
-      "url": "https://ioi.dk/hitman/news/2026/hitman-the-board-game-launch"
     }
   ]
 }

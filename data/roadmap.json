@@ -1,7 +1,12 @@
 {
-  "generated": "2026-10-29T08:20:38.634612+00:00",
-  "count": 0,
+  "generated": "2026-10-29T15:20:22.789773+00:00",
+  "count": 9,
   "roadmaps": [
+    {
+      "title": "HITMAN - Season of The Host",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host",
+      "events": 9
+    },
     {
       "title": "HITMAN - Season of The Herbalist",
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist",
@@ -11,12 +16,98 @@
       "title": "HITMAN - Season of The Wizard",
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-wizard",
       "events": 19
-    },
-    {
-      "title": "HITMAN - Season of the Royal Ace",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-royal-ace",
-      "events": 8
     }
   ],
-  "events": []
+  "events": [
+    {
+      "title": "FC7S Roulette Rivals World Championship Batch",
+      "kind": "Featured Contracts",
+      "section": "Featured Contracts",
+      "start": "2026-10-29",
+      "end": null,
+      "image": "https://cms.ioi.dk/media/eudda04r/website_blogpost_1920_08.jpg?quality=78&hmac=dfc9a9f74a6c513d157c78947e3249ad9c8516abc64a24569db8ca044909adf5",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host"
+    },
+    {
+      "title": "Like Mist",
+      "kind": "Challenge",
+      "section": "New Challenges",
+      "start": "2026-10-29",
+      "end": null,
+      "image": "https://cms.ioi.dk/media/3ukpzh2m/website_blogpost_1920_05.jpg?quality=78&hmac=819eb1ae95610832f1978cd6fd5b99c0f563786342eec76fee5ecdadca8bfb21",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host"
+    },
+    {
+      "title": "Royal Purple Banana",
+      "kind": "Twitch Drop",
+      "section": "Twitch Drops",
+      "start": "2026-10-29",
+      "end": "2026-11-09",
+      "image": "https://cms.ioi.dk/media/lzwhd31y/website_blogpost_1920_10.jpg?quality=78&hmac=b1cad05d8daefc6fda5c265a2305c4685af35b8e90d389a2eaa3fa37147a482b",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host",
+      "source": "twitchdrops"
+    },
+    {
+      "title": "The Hijacker Duck",
+      "kind": "IOI Account",
+      "section": "Ioi Account Rewards",
+      "start": "2026-10-29",
+      "end": null,
+      "image": "https://cms.ioi.dk/media/ztlpwtax/website_blogpost_1920_07.jpg?quality=78&hmac=ff7e0353898c07e7b3a9155e0b61b37630bf84521285432d54ec9fed7c593a99",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host"
+    },
+    {
+      "title": "The Host",
+      "kind": "Elusive Target",
+      "section": "Premium Content",
+      "start": "2026-10-29",
+      "end": "2026-11-25",
+      "image": "https://cms.ioi.dk/media/s3ofdfzx/website_blogpost_1920_01.jpg?quality=78&hmac=8656cc011733d47cc0523ebec881a51a4f33f15ee50612781846f131ded5c7a6",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host",
+      "source": "hitmaps",
+      "hitmaps_url": "https://www.hitmaps.com/games/hitman2/hawkes-bay/nightcall"
+    },
+    {
+      "title": "The Pharmacist - Year 6",
+      "kind": "Elusive Target",
+      "section": "Returning Elusive Targets",
+      "start": "2026-10-30",
+      "end": "2026-11-08",
+      "image": "https://cms.ioi.dk/media/3bwpvyao/website_blogpost_1920_02.jpg?quality=78&hmac=91ff3a92b80f4598b0e3235e0dc6119c0db7c850083e2c96e767a64987f04740",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host",
+      "source": "hitmaps",
+      "hitmaps_url": "https://www.hitmaps.com/games/hitman/paris/the-showstopper"
+    },
+    {
+      "title": "The Warlord - Year 6",
+      "kind": "Elusive Target",
+      "section": "Returning Elusive Targets",
+      "start": "2026-11-06",
+      "end": "2026-11-15",
+      "image": "https://cms.ioi.dk/media/qowbpcbs/website_blogpost_1920_03.jpg?quality=78&hmac=70e247381afd2ca905100e1fe8df48d7f191b2a8536e9a8c6e40e4b3f221a18a",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host",
+      "source": "hitmaps",
+      "hitmaps_url": "https://www.hitmaps.com/games/hitman/bangkok/club-27"
+    },
+    {
+      "title": "Munga's Big Batch",
+      "kind": "Featured Contracts",
+      "section": "Featured Contracts",
+      "start": "2026-11-12",
+      "end": null,
+      "image": "https://cms.ioi.dk/media/2yblclxy/website_blogpost_1920_09.jpg?quality=78&hmac=ee3cc2730473222b219e43cee276af199fc886462eba1ae9411c972c844af257",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host"
+    },
+    {
+      "title": "The Entertainer - Year 6",
+      "kind": "Elusive Target",
+      "section": "Returning Elusive Targets",
+      "start": "2026-11-13",
+      "end": "2026-11-22",
+      "image": "https://cms.ioi.dk/media/2gxn52y1/website_blogpost_1920_04.jpg?quality=78&hmac=0d70043a184adfec08762f032238d245a1a6d808aa39a44ad1350ed59ea1d5df",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host",
+      "source": "hitmaps",
+      "hitmaps_url": "https://www.hitmaps.com/games/hitman/marrakesh/a-house-built-on-sand"
+    }
+  ]
 }

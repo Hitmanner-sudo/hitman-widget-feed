@@ -1,18 +1,35 @@
 {
-  "generated": "2026-10-29T08:20:37.488292+00:00",
+  "generated": "2026-10-29T15:20:21.409136+00:00",
   "items": [
     {
       "game": "HITMAN World of Assassination",
       "slug": "hitman-world-of-assassination",
-      "campaign_image": "https://static-cdn.jtvnw.net/twitch-quests-assets/CAMPAIGN/4bf2cbda-7bd1-46eb-8950-48e5c010f817.jpeg",
+      "campaign_image": "https://static-cdn.jtvnw.net/twitch-quests-assets/CAMPAIGN/0a349862-dcad-45fb-a7b6-c8d6c0f4f7fe.jpeg",
       "account_link_url": "https://account.ioi.dk/",
-      "soonest_end_iso": null,
-      "end_human": null,
-      "campaign_count": 0,
+      "soonest_end_iso": "2026-11-09T14:00:59.999000+00:00",
+      "end_human": "Nov 9",
+      "campaign_count": 1,
       "total_reward_count": 0,
       "page_ok": true,
-      "active_rewards": [],
-      "campaigns": [],
+      "active_rewards": [
+        {
+          "name": "Royal Purple Banana",
+          "image": "https://static-cdn.jtvnw.net/twitch-quests-assets/REWARD/e20944b8-76fa-4997-b4aa-76767ea25997.jpeg",
+          "requirement": "Watch 1h"
+        }
+      ],
+      "campaigns": [
+        {
+          "name": "The Host Drop #1",
+          "owner": "IO Interactive",
+          "dates_text": "Oct 29 – Nov 9",
+          "end_iso": "2026-11-09T14:00:59.999000+00:00",
+          "channels": "All Channels",
+          "description": "Earning this reward is simple. You only need to link your IOI Account to your Twitch account and then watch a cumulative 1 hour of HITMAN World of Assassination on Twitch during the drop campaign duration.",
+          "rewards": [],
+          "reward_count": 0
+        }
+      ],
       "url": "https://twitchdrops.app/game/hitman-world-of-assassination"
     },
     {
