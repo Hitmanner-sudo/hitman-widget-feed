@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-30T21:33:54.167506+00:00",
-  "count": 9,
+  "generated": "2026-10-31T01:01:12.862060+00:00",
+  "count": 6,
   "roadmaps": [
     {
       "title": "HITMAN - Season of The Host",
@@ -20,24 +20,6 @@
   ],
   "events": [
     {
-      "title": "FC7S Roulette Rivals World Championship Batch",
-      "kind": "Featured Contracts",
-      "section": "Featured Contracts",
-      "start": "2026-10-29",
-      "end": null,
-      "image": "https://cms.ioi.dk/media/eudda04r/website_blogpost_1920_08.jpg?quality=78&hmac=dfc9a9f74a6c513d157c78947e3249ad9c8516abc64a24569db8ca044909adf5",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host"
-    },
-    {
-      "title": "Like Mist",
-      "kind": "Challenge",
-      "section": "New Challenges",
-      "start": "2026-10-29",
-      "end": null,
-      "image": "https://cms.ioi.dk/media/3ukpzh2m/website_blogpost_1920_05.jpg?quality=78&hmac=819eb1ae95610832f1978cd6fd5b99c0f563786342eec76fee5ecdadca8bfb21",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host"
-    },
-    {
       "title": "Royal Purple Banana",
       "kind": "Twitch Drop",
       "section": "Twitch Drops",
@@ -46,15 +28,6 @@
       "image": "https://cms.ioi.dk/media/lzwhd31y/website_blogpost_1920_10.jpg?quality=78&hmac=b1cad05d8daefc6fda5c265a2305c4685af35b8e90d389a2eaa3fa37147a482b",
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host",
       "source": "twitchdrops"
-    },
-    {
-      "title": "The Hijacker Duck",
-      "kind": "IOI Account",
-      "section": "Ioi Account Rewards",
-      "start": "2026-10-29",
-      "end": null,
-      "image": "https://cms.ioi.dk/media/ztlpwtax/website_blogpost_1920_07.jpg?quality=78&hmac=ff7e0353898c07e7b3a9155e0b61b37630bf84521285432d54ec9fed7c593a99",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host"
     },
     {
       "title": "The Host",
