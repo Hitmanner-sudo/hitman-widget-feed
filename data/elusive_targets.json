@@ -1,7 +1,7 @@
 {
-  "generated": "2026-11-06T10:24:20.898288+00:00",
-  "ongoing_count": 2,
-  "incoming_count": 2,
+  "generated": "2026-11-06T17:37:55.118754+00:00",
+  "ongoing_count": 3,
+  "incoming_count": 1,
   "ongoing": [
     {
       "name": "The Pharmacist - Year 6",
@@ -9,6 +9,13 @@
       "end": "2026-11-08T12:00:00Z",
       "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman/the-pharmacist.jpg",
       "url": "https://www.hitmaps.com/games/hitman/paris/the-showstopper"
+    },
+    {
+      "name": "The Warlord - Year 6",
+      "begin": "2026-11-06T12:00:00Z",
+      "end": "2026-11-15T12:00:00Z",
+      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman/the-warlord.jpg",
+      "url": "https://www.hitmaps.com/games/hitman/bangkok/club-27"
     },
     {
       "name": "The Host",
@@ -19,13 +26,6 @@
     }
   ],
   "incoming": [
-    {
-      "name": "The Warlord - Year 6",
-      "begin": "2026-11-06T12:00:00Z",
-      "end": "2026-11-15T12:00:00Z",
-      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman/the-warlord.jpg",
-      "url": "https://www.hitmaps.com/games/hitman/bangkok/club-27"
-    },
     {
       "name": "The Entertainer - Year 6",
       "begin": "2026-11-13T12:00:00Z",
