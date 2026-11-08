@@ -1,15 +1,8 @@
 {
-  "generated": "2026-11-08T09:07:39.798185+00:00",
-  "ongoing_count": 3,
+  "generated": "2026-11-08T15:57:28.571371+00:00",
+  "ongoing_count": 2,
   "incoming_count": 1,
   "ongoing": [
-    {
-      "name": "The Pharmacist - Year 6",
-      "begin": "2026-10-30T12:00:00Z",
-      "end": "2026-11-08T12:00:00Z",
-      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman/the-pharmacist.jpg",
-      "url": "https://www.hitmaps.com/games/hitman/paris/the-showstopper"
-    },
     {
       "name": "The Warlord - Year 6",
       "begin": "2026-11-06T12:00:00Z",

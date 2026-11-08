@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-08T09:07:49.215425+00:00",
-  "count": 6,
+  "generated": "2026-11-08T15:57:33.686704+00:00",
+  "count": 5,
   "roadmaps": [
     {
       "title": "HITMAN - Season of The Host",
@@ -39,17 +39,6 @@
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host",
       "source": "hitmaps",
       "hitmaps_url": "https://www.hitmaps.com/games/hitman2/hawkes-bay/nightcall"
-    },
-    {
-      "title": "The Pharmacist - Year 6",
-      "kind": "Elusive Target",
-      "section": "Returning Elusive Targets",
-      "start": "2026-10-30",
-      "end": "2026-11-08",
-      "image": "https://cms.ioi.dk/media/3bwpvyao/website_blogpost_1920_02.jpg?quality=78&hmac=91ff3a92b80f4598b0e3235e0dc6119c0db7c850083e2c96e767a64987f04740",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host",
-      "source": "hitmaps",
-      "hitmaps_url": "https://www.hitmaps.com/games/hitman/paris/the-showstopper"
     },
     {
       "title": "The Warlord - Year 6",
