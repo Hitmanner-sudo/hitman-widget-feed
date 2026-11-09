@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-09T12:54:10.605253+00:00",
-  "count": 6,
+  "generated": "2026-11-09T22:53:18.671933+00:00",
+  "count": 5,
   "roadmaps": [
     {
       "title": "HITMAN - Season of The Host",
@@ -19,16 +19,6 @@
     }
   ],
   "events": [
-    {
-      "title": "Royal Purple Banana",
-      "kind": "Twitch Drop",
-      "section": "Twitch Drops",
-      "start": "2026-10-29",
-      "end": "2026-11-09",
-      "image": "https://cms.ioi.dk/media/lzwhd31y/website_blogpost_1920_10.jpg?quality=78&hmac=b1cad05d8daefc6fda5c265a2305c4685af35b8e90d389a2eaa3fa37147a482b",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host",
-      "source": "twitchdrops"
-    },
     {
       "title": "The Host",
       "kind": "Elusive Target",
