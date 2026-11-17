@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-16T18:42:20.511598+00:00",
-  "count": 3,
+  "generated": "2026-11-17T02:07:07.295647+00:00",
+  "count": 2,
   "roadmaps": [
     {
       "title": "HITMAN - Season of The Host",
@@ -29,15 +29,6 @@
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host",
       "source": "hitmaps",
       "hitmaps_url": "https://www.hitmaps.com/games/hitman2/hawkes-bay/nightcall"
-    },
-    {
-      "title": "The Warlord",
-      "kind": "Elusive Target",
-      "section": "Returning Elusive Targets",
-      "start": "2026-11-06",
-      "end": "2026-11-15",
-      "image": "https://cms.ioi.dk/media/qowbpcbs/website_blogpost_1920_03.jpg?quality=78&hmac=70e247381afd2ca905100e1fe8df48d7f191b2a8536e9a8c6e40e4b3f221a18a",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host"
     },
     {
       "title": "The Entertainer - Year 6",
