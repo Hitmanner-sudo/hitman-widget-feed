@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-22T09:38:51.232950+00:00",
-  "count": 2,
+  "generated": "2026-11-22T17:24:22.934481+00:00",
+  "count": 1,
   "roadmaps": [
     {
       "title": "HITMAN - Season of The Host",
@@ -29,17 +29,6 @@
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host",
       "source": "hitmaps",
       "hitmaps_url": "https://www.hitmaps.com/games/hitman2/hawkes-bay/nightcall"
-    },
-    {
-      "title": "The Entertainer - Year 6",
-      "kind": "Elusive Target",
-      "section": "Returning Elusive Targets",
-      "start": "2026-11-13",
-      "end": "2026-11-22",
-      "image": "https://cms.ioi.dk/media/2gxn52y1/website_blogpost_1920_04.jpg?quality=78&hmac=0d70043a184adfec08762f032238d245a1a6d808aa39a44ad1350ed59ea1d5df",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host",
-      "source": "hitmaps",
-      "hitmaps_url": "https://www.hitmaps.com/games/hitman/marrakesh/a-house-built-on-sand"
     }
   ]
 }
