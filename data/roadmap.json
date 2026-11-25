@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-25T03:46:51.554037+00:00",
+  "generated": "2026-11-25T13:38:13.407060+00:00",
   "count": 1,
   "roadmaps": [
     {
@@ -21,14 +21,12 @@
   "events": [
     {
       "title": "The Host",
-      "kind": "Elusive Target",
+      "kind": "Premium",
       "section": "Premium Content",
       "start": "2026-10-29",
       "end": "2026-11-25",
       "image": "https://cms.ioi.dk/media/s3ofdfzx/website_blogpost_1920_01.jpg?quality=78&hmac=8656cc011733d47cc0523ebec881a51a4f33f15ee50612781846f131ded5c7a6",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host",
-      "source": "hitmaps",
-      "hitmaps_url": "https://www.hitmaps.com/games/hitman2/hawkes-bay/nightcall"
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host"
     }
   ]
 }

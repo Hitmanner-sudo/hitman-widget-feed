@@ -1,16 +1,8 @@
 {
-  "generated": "2026-11-25T03:46:44.707437+00:00",
-  "ongoing_count": 1,
+  "generated": "2026-11-25T13:38:07.434170+00:00",
+  "ongoing_count": 0,
   "incoming_count": 0,
-  "ongoing": [
-    {
-      "name": "The Host",
-      "begin": "2026-10-29T12:00:00Z",
-      "end": "2026-11-25T12:00:00Z",
-      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman2/the-host.jpg",
-      "url": "https://www.hitmaps.com/games/hitman2/hawkes-bay/nightcall"
-    }
-  ],
+  "ongoing": [],
   "incoming": [],
   "attribution": "Data via HITMAPS (hitmaps.com)"
 }
