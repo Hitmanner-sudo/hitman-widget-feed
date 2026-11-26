@@ -1,8 +1,38 @@
 {
-  "generated": "2026-11-26T14:21:38.200064+00:00",
-  "ongoing_count": 0,
-  "incoming_count": 0,
-  "ongoing": [],
-  "incoming": [],
+  "generated": "2026-11-26T23:09:16.998547+00:00",
+  "ongoing_count": 1,
+  "incoming_count": 3,
+  "ongoing": [
+    {
+      "name": "The Mutiny",
+      "begin": "2026-11-26T12:00:00Z",
+      "end": "2026-12-24T12:00:00Z",
+      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman2/the-mutiny.jpg",
+      "url": "https://www.hitmaps.com/games/hitman2/ambrose-island/shadows-in-the-water"
+    }
+  ],
+  "incoming": [
+    {
+      "name": "The Food Critic - Year 6",
+      "begin": "2026-11-27T12:00:00Z",
+      "end": "2026-12-06T12:00:00Z",
+      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman/the-food-critic.jpg",
+      "url": "https://www.hitmaps.com/games/hitman/bangkok/club-27"
+    },
+    {
+      "name": "The Sensation - Year 6",
+      "begin": "2026-12-04T12:00:00Z",
+      "end": "2026-12-13T12:00:00Z",
+      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman/the-sensation.jpg",
+      "url": "https://www.hitmaps.com/games/hitman/paris/the-showstopper"
+    },
+    {
+      "name": "The Serial Killer - Year 6",
+      "begin": "2026-12-11T12:00:00Z",
+      "end": "2026-12-20T12:00:00Z",
+      "image": "https://media.hitmaps.com/img/hitman2/actors/elusive-targets/the-serial-killer.jpg",
+      "url": "https://www.hitmaps.com/games/hitman2/whittleton-creek/another-life"
+    }
+  ],
   "attribution": "Data via HITMAPS (hitmaps.com)"
 }

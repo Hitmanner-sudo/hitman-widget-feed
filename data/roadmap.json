@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-26T14:21:43.156239+00:00",
-  "count": 11,
+  "generated": "2026-11-26T23:09:21.579431+00:00",
+  "count": 12,
   "roadmaps": [
     {
       "title": "HITMAN - Season of Bawma",
@@ -29,6 +29,16 @@
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host"
     },
     {
+      "title": "Candy Cane Crowbar",
+      "kind": "Twitch Drop",
+      "section": "Twitch Drops",
+      "start": "2026-11-26",
+      "end": "2026-12-13",
+      "image": "https://cms.ioi.dk/media/b00fks0x/website_blogpost_1920_10.jpg?quality=78&hmac=c805a408957f2a1cf794408c10f1af00f424fcd840a887adbe122bcbbe43620c",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-bawma",
+      "source": "twitchdrops"
+    },
+    {
       "title": "Dry Getaway",
       "kind": "Challenge",
       "section": "New Challenges",
@@ -39,12 +49,14 @@
     },
     {
       "title": "The Mutiny",
-      "kind": "Premium",
+      "kind": "Elusive Target",
       "section": "Premium Content",
       "start": "2026-11-26",
       "end": "2026-12-24",
       "image": "https://cms.ioi.dk/media/rhakky3z/website_blogpost_1920_01.jpg?quality=78&hmac=7ffdbf3341f748009a1ae2837c3722eaa4935b30121aa746fe0ed808e6e268ed",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-bawma"
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-bawma",
+      "source": "hitmaps",
+      "hitmaps_url": "https://www.hitmaps.com/games/hitman2/ambrose-island/shadows-in-the-water"
     },
     {
       "title": "The Rock Royalty Duck",
@@ -56,31 +68,37 @@
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-bawma"
     },
     {
-      "title": "The Food Critic",
+      "title": "The Food Critic - Year 6",
       "kind": "Elusive Target",
       "section": "Returning Elusive Targets",
       "start": "2026-11-27",
       "end": "2026-12-06",
       "image": "https://cms.ioi.dk/media/kkxh5fsq/website_blogpost_1920_02.jpg?quality=78&hmac=eb3d1d2d0e4262d1652cfbb5749f98e37f8b3e2343ee23d66941d1a1f1071eb9",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-bawma"
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-bawma",
+      "source": "hitmaps",
+      "hitmaps_url": "https://www.hitmaps.com/games/hitman/bangkok/club-27"
     },
     {
-      "title": "The Sensation",
+      "title": "The Sensation - Year 6",
       "kind": "Elusive Target",
       "section": "Returning Elusive Targets",
       "start": "2026-12-04",
       "end": "2026-12-13",
       "image": "https://cms.ioi.dk/media/vymjzzjp/website_blogpost_1920_03.jpg?quality=78&hmac=90c40974a6b7651a0a708b4b4cb2ca90af80439519ca5b6eb50d4dd47a971866",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-bawma"
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-bawma",
+      "source": "hitmaps",
+      "hitmaps_url": "https://www.hitmaps.com/games/hitman/paris/the-showstopper"
     },
     {
-      "title": "The Serial Killer",
+      "title": "The Serial Killer - Year 6",
       "kind": "Elusive Target",
       "section": "Returning Elusive Targets",
       "start": "2026-12-11",
       "end": "2026-12-20",
       "image": "https://cms.ioi.dk/media/u5jj4xoi/website_blogpost_1920_04.jpg?quality=78&hmac=7db7eecea93782a5a051e00bc198acc1c4bc6c6bea46c8daebf9f85788994656",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-bawma"
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-bawma",
+      "source": "hitmaps",
+      "hitmaps_url": "https://www.hitmaps.com/games/hitman2/whittleton-creek/another-life"
     },
     {
       "title": "Purple Streak Galore",

@@ -1,7 +1,14 @@
 {
-  "generated": "2026-11-26T14:21:41.630054+00:00",
+  "generated": "2026-11-26T23:09:20.171449+00:00",
   "count": 10,
   "items": [
+    {
+      "game": "HITMAN",
+      "type": "News",
+      "title": "Lenny Kravitz stars in the latest Elusive Target",
+      "image": "https://cms.ioi.dk/media/qatir2iy/card_bawma.jpg?width=1200&quality=78&hmac=97cfce90f13f6a71455ebaaad64c49a87e35fd0f610717168e6d8ef4ad9f4725",
+      "url": "https://ioi.dk/hitman/news/2026/lenny-kravitz-stars-in-the-latest-elusive-target-mission"
+    },
     {
       "game": "HITMAN",
       "type": "Roadmap",
@@ -64,13 +71,6 @@
       "title": "Game Update | 3.270.1",
       "image": "https://cms.ioi.dk/media/nkjnrdf1/game_update_1920x1080.jpg?quality=78&hmac=2c20b75e95781e4c3b45f887e79eff1b7a47cd613de498f81ae6896ceeb079a1",
       "url": "https://ioi.dk/hitman/patch-notes/2026/game-update-3-270-1"
-    },
-    {
-      "game": "HITMAN",
-      "type": "Patch Notes",
-      "title": "Game Update | 3.270",
-      "image": "https://cms.ioi.dk/media/nkjnrdf1/game_update_1920x1080.jpg?quality=78&hmac=2c20b75e95781e4c3b45f887e79eff1b7a47cd613de498f81ae6896ceeb079a1",
-      "url": "https://ioi.dk/hitman/patch-notes/2026/game-update-3-270"
     }
   ]
 }
