@@ -1,7 +1,12 @@
 {
-  "generated": "2026-11-26T04:31:40.512932+00:00",
-  "count": 1,
+  "generated": "2026-11-26T14:21:43.156239+00:00",
+  "count": 11,
   "roadmaps": [
+    {
+      "title": "HITMAN - Season of Bawma",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-bawma",
+      "events": 18
+    },
     {
       "title": "HITMAN - Season of The Host",
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host",
@@ -11,11 +16,6 @@
       "title": "HITMAN - Season of The Herbalist",
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-herbalist",
       "events": 17
-    },
-    {
-      "title": "HITMAN - Season of The Wizard",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-wizard",
-      "events": 19
     }
   ],
   "events": [
@@ -27,6 +27,96 @@
       "end": "2026-11-25",
       "image": "https://cms.ioi.dk/media/s3ofdfzx/website_blogpost_1920_01.jpg?quality=78&hmac=8656cc011733d47cc0523ebec881a51a4f33f15ee50612781846f131ded5c7a6",
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host"
+    },
+    {
+      "title": "Dry Getaway",
+      "kind": "Challenge",
+      "section": "New Challenges",
+      "start": "2026-11-26",
+      "end": null,
+      "image": "",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-bawma"
+    },
+    {
+      "title": "The Mutiny",
+      "kind": "Premium",
+      "section": "Premium Content",
+      "start": "2026-11-26",
+      "end": "2026-12-24",
+      "image": "https://cms.ioi.dk/media/rhakky3z/website_blogpost_1920_01.jpg?quality=78&hmac=7ffdbf3341f748009a1ae2837c3722eaa4935b30121aa746fe0ed808e6e268ed",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-bawma"
+    },
+    {
+      "title": "The Rock Royalty Duck",
+      "kind": "IOI Account",
+      "section": "Ioi Account Rewards",
+      "start": "2026-11-26",
+      "end": null,
+      "image": "https://cms.ioi.dk/media/taqh52gh/website_blogpost_1920_07.jpg?quality=78&hmac=8834b96032442eaf77519c4f5208dbdb1b1ce1f7041563e0f1888154fa2baa1e",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-bawma"
+    },
+    {
+      "title": "The Food Critic",
+      "kind": "Elusive Target",
+      "section": "Returning Elusive Targets",
+      "start": "2026-11-27",
+      "end": "2026-12-06",
+      "image": "https://cms.ioi.dk/media/kkxh5fsq/website_blogpost_1920_02.jpg?quality=78&hmac=eb3d1d2d0e4262d1652cfbb5749f98e37f8b3e2343ee23d66941d1a1f1071eb9",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-bawma"
+    },
+    {
+      "title": "The Sensation",
+      "kind": "Elusive Target",
+      "section": "Returning Elusive Targets",
+      "start": "2026-12-04",
+      "end": "2026-12-13",
+      "image": "https://cms.ioi.dk/media/vymjzzjp/website_blogpost_1920_03.jpg?quality=78&hmac=90c40974a6b7651a0a708b4b4cb2ca90af80439519ca5b6eb50d4dd47a971866",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-bawma"
+    },
+    {
+      "title": "The Serial Killer",
+      "kind": "Elusive Target",
+      "section": "Returning Elusive Targets",
+      "start": "2026-12-11",
+      "end": "2026-12-20",
+      "image": "https://cms.ioi.dk/media/u5jj4xoi/website_blogpost_1920_04.jpg?quality=78&hmac=7db7eecea93782a5a051e00bc198acc1c4bc6c6bea46c8daebf9f85788994656",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-bawma"
+    },
+    {
+      "title": "Purple Streak Galore",
+      "kind": "Twitch Drop",
+      "section": "Twitch Drops",
+      "start": "2026-12-14",
+      "end": "2027-02-28",
+      "image": "https://cms.ioi.dk/media/c32pjwni/website_blogpost_1920_10-1.jpg?quality=78&hmac=fcd1cba14121be81043661802327fe24d23729c8dbd419bd248758c086e96338",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-bawma"
+    },
+    {
+      "title": "Arti’s Dead of Winter",
+      "kind": "Featured Contracts",
+      "section": "Featured Contracts",
+      "start": "2026-12-21",
+      "end": null,
+      "image": "https://cms.ioi.dk/media/114hsztt/website_blogpost_1920_08.jpg?quality=78&hmac=cb1f54dfb8b391333dc97ef57fdf1d64cb913f7bc1ad53634447e1fb7bff2b83",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-bawma"
+    },
+    {
+      "title": "Holiday Hoarders",
+      "kind": "Event",
+      "section": "Returning Events",
+      "start": "2026-12-21",
+      "end": "2027-01-03",
+      "image": "https://cms.ioi.dk/media/snrdawh4/website_blogpost_1920_07-6.jpg?quality=78&hmac=68b8a0bccce591ffbcf1eb9b258566f0585a6664dc947b9015451fad04f182b7",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-bawma"
+    },
+    {
+      "title": "Year 6 Galore",
+      "kind": "Elusive Target",
+      "section": "Returning Elusive Targets",
+      "start": "2026-12-21",
+      "end": "2027-01-31",
+      "image": "https://cms.ioi.dk/media/izxo5a0d/website_blogpost_1920_04-1.jpg?quality=78&hmac=8f22613a03170367d9f3f01eb2cbc4792cf92b55d60d66f045913e0d7696d057",
+      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-bawma"
     }
   ]
 }
