@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-26T23:09:21.579431+00:00",
-  "count": 12,
+  "generated": "2026-11-27T05:02:52.888711+00:00",
+  "count": 11,
   "roadmaps": [
     {
       "title": "HITMAN - Season of Bawma",
@@ -19,15 +19,6 @@
     }
   ],
   "events": [
-    {
-      "title": "The Host",
-      "kind": "Premium",
-      "section": "Premium Content",
-      "start": "2026-10-29",
-      "end": "2026-11-25",
-      "image": "https://cms.ioi.dk/media/s3ofdfzx/website_blogpost_1920_01.jpg?quality=78&hmac=8656cc011733d47cc0523ebec881a51a4f33f15ee50612781846f131ded5c7a6",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-the-host"
-    },
     {
       "title": "Candy Cane Crowbar",
       "kind": "Twitch Drop",
