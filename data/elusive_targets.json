@@ -1,8 +1,15 @@
 {
-  "generated": "2026-11-27T05:02:47.468027+00:00",
-  "ongoing_count": 1,
-  "incoming_count": 3,
+  "generated": "2026-11-27T14:57:10.936493+00:00",
+  "ongoing_count": 2,
+  "incoming_count": 2,
   "ongoing": [
+    {
+      "name": "The Food Critic - Year 6",
+      "begin": "2026-11-27T12:00:00Z",
+      "end": "2026-12-06T12:00:00Z",
+      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman/the-food-critic.jpg",
+      "url": "https://www.hitmaps.com/games/hitman/bangkok/club-27"
+    },
     {
       "name": "The Mutiny",
       "begin": "2026-11-26T12:00:00Z",
@@ -12,13 +19,6 @@
     }
   ],
   "incoming": [
-    {
-      "name": "The Food Critic - Year 6",
-      "begin": "2026-11-27T12:00:00Z",
-      "end": "2026-12-06T12:00:00Z",
-      "image": "https://media.hitmaps.com/img/hitman3/actors/elusive-targets/hitman/the-food-critic.jpg",
-      "url": "https://www.hitmaps.com/games/hitman/bangkok/club-27"
-    },
     {
       "name": "The Sensation - Year 6",
       "begin": "2026-12-04T12:00:00Z",

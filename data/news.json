@@ -1,7 +1,14 @@
 {
-  "generated": "2026-11-27T05:02:51.047351+00:00",
+  "generated": "2026-11-27T14:57:14.569916+00:00",
   "count": 10,
   "items": [
+    {
+      "game": "HITMAN",
+      "type": "News",
+      "title": "Unlock a FREE reward in 007 First Light",
+      "image": "https://cms.ioi.dk/media/oeglo4jl/woa_bawma_knt_reward_16x9_clean_web.jpg?width=1200&quality=78&hmac=a1cb48fdccb23311b089196ae2ed682b48ed8ad3d45f9d8a8dbc59559b4aadb6",
+      "url": "https://ioi.dk/hitman/news/2026/unlock-a-free-reward-in-007-first-light"
+    },
     {
       "game": "HITMAN",
       "type": "News",
@@ -64,13 +71,6 @@
       "title": "Snoop Dogg joins the World of Assassination",
       "image": "https://cms.ioi.dk/media/ifmljm4f/herbalist_screenshot.jpg?quality=78&hmac=c4f36fba20ca9870c4adcd22d16163e1f4dc32ec79efa8bb92f9a413d6851fc2",
       "url": "https://ioi.dk/hitman/news/2026/snoop-dogg-joins-the-world-of-assassination"
-    },
-    {
-      "game": "HITMAN",
-      "type": "Patch Notes",
-      "title": "Game Update | 3.270.1",
-      "image": "https://cms.ioi.dk/media/nkjnrdf1/game_update_1920x1080.jpg?quality=78&hmac=2c20b75e95781e4c3b45f887e79eff1b7a47cd613de498f81ae6896ceeb079a1",
-      "url": "https://ioi.dk/hitman/patch-notes/2026/game-update-3-270-1"
     }
   ]
 }
