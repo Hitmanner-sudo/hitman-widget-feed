@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-27T23:20:37.256353+00:00",
-  "count": 11,
+  "generated": "2026-11-28T04:48:29.319075+00:00",
+  "count": 9,
   "roadmaps": [
     {
       "title": "HITMAN - Season of Bawma",
@@ -30,15 +30,6 @@
       "source": "twitchdrops"
     },
     {
-      "title": "Dry Getaway",
-      "kind": "Challenge",
-      "section": "New Challenges",
-      "start": "2026-11-26",
-      "end": null,
-      "image": "",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-bawma"
-    },
-    {
       "title": "The Mutiny",
       "kind": "Elusive Target",
       "section": "Premium Content",
@@ -48,15 +39,6 @@
       "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-bawma",
       "source": "hitmaps",
       "hitmaps_url": "https://www.hitmaps.com/games/hitman2/ambrose-island/shadows-in-the-water"
-    },
-    {
-      "title": "The Rock Royalty Duck",
-      "kind": "IOI Account",
-      "section": "Ioi Account Rewards",
-      "start": "2026-11-26",
-      "end": null,
-      "image": "https://cms.ioi.dk/media/taqh52gh/website_blogpost_1920_07.jpg?quality=78&hmac=8834b96032442eaf77519c4f5208dbdb1b1ce1f7041563e0f1888154fa2baa1e",
-      "url": "https://ioi.dk/hitman/roadmaps/2026/season-of-bawma"
     },
     {
       "title": "The Food Critic - Year 6",
